@@ -106,6 +106,7 @@
             this.Controls.Add(this.btnMovimentos);
             this.Controls.Add(this.btnInventario);
             this.Name = "Init";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Fardamentos";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Init_FormClosed);
             this.ResumeLayout(false);

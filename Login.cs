@@ -41,5 +41,10 @@ namespace Fardamentos
 
             Properties.Settings.Default.Save();
         }
+
+        private void Login_Load(object sender, EventArgs e)
+        {
+
+        }
     }      
 }
