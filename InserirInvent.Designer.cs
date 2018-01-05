@@ -33,14 +33,16 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.comboBox5 = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
+            this.cboxTamanhos = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.cboxEquipamento = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
             this.cboxTipoEquipamento = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.cboxResponsavel = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.lblNumInt = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.lblNameResp = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnInserir
@@ -87,13 +89,13 @@
             this.label9.TabIndex = 29;
             this.label9.Text = "Quantidade :";
             // 
-            // comboBox4
+            // cboxTamanhos
             // 
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(129, 95);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(58, 21);
-            this.comboBox4.TabIndex = 28;
+            this.cboxTamanhos.FormattingEnabled = true;
+            this.cboxTamanhos.Location = new System.Drawing.Point(129, 95);
+            this.cboxTamanhos.Name = "cboxTamanhos";
+            this.cboxTamanhos.Size = new System.Drawing.Size(58, 21);
+            this.cboxTamanhos.TabIndex = 28;
             // 
             // label8
             // 
@@ -104,13 +106,13 @@
             this.label8.TabIndex = 27;
             this.label8.Text = "Tamanho :";
             // 
-            // comboBox3
+            // cboxEquipamento
             // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(129, 68);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(186, 21);
-            this.comboBox3.TabIndex = 26;
+            this.cboxEquipamento.FormattingEnabled = true;
+            this.cboxEquipamento.Location = new System.Drawing.Point(129, 68);
+            this.cboxEquipamento.Name = "cboxEquipamento";
+            this.cboxEquipamento.Size = new System.Drawing.Size(186, 21);
+            this.cboxEquipamento.TabIndex = 26;
             // 
             // label7
             // 
@@ -138,14 +140,6 @@
             this.label6.TabIndex = 23;
             this.label6.Text = "Tipo de Equipamento:";
             // 
-            // cboxResponsavel
-            // 
-            this.cboxResponsavel.FormattingEnabled = true;
-            this.cboxResponsavel.Location = new System.Drawing.Point(129, 12);
-            this.cboxResponsavel.Name = "cboxResponsavel";
-            this.cboxResponsavel.Size = new System.Drawing.Size(186, 21);
-            this.cboxResponsavel.TabIndex = 22;
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -155,23 +149,50 @@
             this.label5.TabIndex = 21;
             this.label5.Text = "Responsável:";
             // 
+            // lblNumInt
+            // 
+            this.lblNumInt.AutoSize = true;
+            this.lblNumInt.Location = new System.Drawing.Point(126, 15);
+            this.lblNumInt.Name = "lblNumInt";
+            this.lblNumInt.Size = new System.Drawing.Size(0, 13);
+            this.lblNumInt.TabIndex = 35;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(157, 15);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(10, 13);
+            this.label3.TabIndex = 36;
+            this.label3.Text = "-";
+            // 
+            // lblNameResp
+            // 
+            this.lblNameResp.AutoSize = true;
+            this.lblNameResp.Location = new System.Drawing.Point(173, 15);
+            this.lblNameResp.Name = "lblNameResp";
+            this.lblNameResp.Size = new System.Drawing.Size(0, 13);
+            this.lblNameResp.TabIndex = 37;
+            // 
             // InserirInvent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(327, 273);
+            this.Controls.Add(this.lblNameResp);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.lblNumInt);
             this.Controls.Add(this.btnInserir);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.comboBox5);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.comboBox4);
+            this.Controls.Add(this.cboxTamanhos);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.comboBox3);
+            this.Controls.Add(this.cboxEquipamento);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.cboxTipoEquipamento);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.cboxResponsavel);
             this.Controls.Add(this.label5);
             this.Name = "InserirInvent";
             this.Text = "InserirInvent";
@@ -187,13 +208,15 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.ComboBox comboBox5;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.ComboBox comboBox4;
+        private System.Windows.Forms.ComboBox cboxTamanhos;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.ComboBox cboxEquipamento;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.ComboBox cboxTipoEquipamento;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.ComboBox cboxResponsavel;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label lblNumInt;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblNameResp;
     }
 }
