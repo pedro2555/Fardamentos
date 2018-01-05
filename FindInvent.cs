@@ -16,16 +16,9 @@ namespace Fardamentos
     {
         public class Find
         {
-            public int TipoEquipamento
-            { get; set; }
-
-            public int Equipamento
-            { get; set; }
-
-            public int Tamanho
-            { get; set; }
-
-            public Find() { }
+            public int TipoEquipamento;
+            public int Equipamento;
+            public int Tamanho;
 
         }
 
@@ -46,10 +39,11 @@ namespace Fardamentos
             result.Equipamento = Convert.ToInt32(cboxEquipamento.SelectedValue);
             result.Tamanho = Convert.ToInt32(cboxTamanho.SelectedValue);
 
-            Inventario.FillResultados();
-
+            Inventario.FillResultados(result.Equipamento, result.TipoEquipamento, result.Tamanho);
+               
 
         }
+      
 
         public void TipoEquipamento()
         {

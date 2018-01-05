@@ -29,14 +29,14 @@
         private void InitializeComponent()
         {
             System.Windows.Forms.Label label7;
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtFind = new System.Windows.Forms.TextBox();
             this.btnFind = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
+            this.lblNumMecBomb = new System.Windows.Forms.Label();
+            this.lblCatBomb = new System.Windows.Forms.Label();
+            this.lblNomeBomb = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabControl2 = new System.Windows.Forms.TabControl();
@@ -47,18 +47,33 @@
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.tabPage6 = new System.Windows.Forms.TabPage();
             this.tabPage7 = new System.Windows.Forms.TabPage();
+            this.tabPage8 = new System.Windows.Forms.TabPage();
             this.label8 = new System.Windows.Forms.Label();
             this.btnAtribuir = new System.Windows.Forms.Button();
             this.btnDevolucao = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.tabPage8 = new System.Windows.Forms.TabPage();
+            this.lblNameLogin = new System.Windows.Forms.Label();
+            this.GridEPIUrbano = new System.Windows.Forms.DataGridView();
+            this.GridEPIFlorestal = new System.Windows.Forms.DataGridView();
+            this.GridFarda1 = new System.Windows.Forms.DataGridView();
+            this.GridFarda2 = new System.Windows.Forms.DataGridView();
+            this.GridFarda3 = new System.Windows.Forms.DataGridView();
             label7 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabControl2.SuspendLayout();
+            this.tabPage3.SuspendLayout();
+            this.tabPage4.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.tabControl3.SuspendLayout();
+            this.tabPage5.SuspendLayout();
+            this.tabPage6.SuspendLayout();
+            this.tabPage7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.GridEPIUrbano)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GridEPIFlorestal)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GridFarda1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GridFarda2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GridFarda3)).BeginInit();
             this.SuspendLayout();
             // 
             // label7
@@ -70,12 +85,12 @@
             label7.TabIndex = 9;
             label7.Text = "Desenvolvido por: Tiago Vicente";
             // 
-            // textBox1
+            // txtFind
             // 
-            this.textBox1.Location = new System.Drawing.Point(595, 20);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(102, 20);
-            this.textBox1.TabIndex = 0;
+            this.txtFind.Location = new System.Drawing.Point(595, 20);
+            this.txtFind.Name = "txtFind";
+            this.txtFind.Size = new System.Drawing.Size(102, 20);
+            this.txtFind.TabIndex = 0;
             // 
             // btnFind
             // 
@@ -85,6 +100,7 @@
             this.btnFind.TabIndex = 1;
             this.btnFind.Text = "Pesquisar";
             this.btnFind.UseVisualStyleBackColor = true;
+            this.btnFind.Click += new System.EventHandler(this.btnFind_Click);
             // 
             // label1
             // 
@@ -113,32 +129,29 @@
             this.label3.TabIndex = 4;
             this.label3.Text = "Nome:";
             // 
-            // label4
+            // lblNumMecBomb
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(118, 23);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(55, 13);
-            this.label4.TabIndex = 5;
-            this.label4.Text = "11070013";
+            this.lblNumMecBomb.AutoSize = true;
+            this.lblNumMecBomb.Location = new System.Drawing.Point(118, 23);
+            this.lblNumMecBomb.Name = "lblNumMecBomb";
+            this.lblNumMecBomb.Size = new System.Drawing.Size(0, 13);
+            this.lblNumMecBomb.TabIndex = 5;
             // 
-            // label5
+            // lblCatBomb
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(266, 23);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(77, 13);
-            this.label5.TabIndex = 6;
-            this.label5.Text = "BOMBEIRO 3ª";
+            this.lblCatBomb.AutoSize = true;
+            this.lblCatBomb.Location = new System.Drawing.Point(266, 23);
+            this.lblCatBomb.Name = "lblCatBomb";
+            this.lblCatBomb.Size = new System.Drawing.Size(0, 13);
+            this.lblCatBomb.TabIndex = 6;
             // 
-            // label6
+            // lblNomeBomb
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(426, 23);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(142, 13);
-            this.label6.TabIndex = 7;
-            this.label6.Text = "Tiago Miguel Alonso Vicente";
+            this.lblNomeBomb.AutoSize = true;
+            this.lblNomeBomb.Location = new System.Drawing.Point(426, 23);
+            this.lblNomeBomb.Name = "lblNomeBomb";
+            this.lblNomeBomb.Size = new System.Drawing.Size(0, 13);
+            this.lblNomeBomb.TabIndex = 7;
             // 
             // tabControl1
             // 
@@ -174,6 +187,7 @@
             // 
             // tabPage3
             // 
+            this.tabPage3.Controls.Add(this.GridEPIUrbano);
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
@@ -184,6 +198,7 @@
             // 
             // tabPage4
             // 
+            this.tabPage4.Controls.Add(this.GridEPIFlorestal);
             this.tabPage4.Location = new System.Drawing.Point(4, 22);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
@@ -216,6 +231,7 @@
             // 
             // tabPage5
             // 
+            this.tabPage5.Controls.Add(this.GridFarda1);
             this.tabPage5.Location = new System.Drawing.Point(4, 22);
             this.tabPage5.Name = "tabPage5";
             this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
@@ -226,6 +242,7 @@
             // 
             // tabPage6
             // 
+            this.tabPage6.Controls.Add(this.GridFarda2);
             this.tabPage6.Location = new System.Drawing.Point(4, 22);
             this.tabPage6.Name = "tabPage6";
             this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
@@ -236,6 +253,7 @@
             // 
             // tabPage7
             // 
+            this.tabPage7.Controls.Add(this.GridFarda3);
             this.tabPage7.Location = new System.Drawing.Point(4, 22);
             this.tabPage7.Name = "tabPage7";
             this.tabPage7.Padding = new System.Windows.Forms.Padding(3);
@@ -243,6 +261,16 @@
             this.tabPage7.TabIndex = 2;
             this.tabPage7.Text = "Farda Nº3";
             this.tabPage7.UseVisualStyleBackColor = true;
+            // 
+            // tabPage8
+            // 
+            this.tabPage8.Location = new System.Drawing.Point(4, 22);
+            this.tabPage8.Name = "tabPage8";
+            this.tabPage8.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage8.Size = new System.Drawing.Size(757, 346);
+            this.tabPage8.TabIndex = 2;
+            this.tabPage8.Text = "Fardamento Devolvido";
+            this.tabPage8.UseVisualStyleBackColor = true;
             // 
             // label8
             // 
@@ -282,52 +310,91 @@
             this.label9.TabIndex = 13;
             this.label9.Text = "Login:";
             // 
-            // label10
+            // lblNameLogin
             // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(54, 434);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(73, 13);
-            this.label10.TabIndex = 14;
-            this.label10.Text = "Tiago Vicente";
+            this.lblNameLogin.AutoSize = true;
+            this.lblNameLogin.Location = new System.Drawing.Point(54, 434);
+            this.lblNameLogin.Name = "lblNameLogin";
+            this.lblNameLogin.Size = new System.Drawing.Size(0, 13);
+            this.lblNameLogin.TabIndex = 14;
             // 
-            // tabPage8
+            // GridEPIUrbano
             // 
-            this.tabPage8.Location = new System.Drawing.Point(4, 22);
-            this.tabPage8.Name = "tabPage8";
-            this.tabPage8.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage8.Size = new System.Drawing.Size(757, 346);
-            this.tabPage8.TabIndex = 2;
-            this.tabPage8.Text = "Fardamento Devolvido";
-            this.tabPage8.UseVisualStyleBackColor = true;
+            this.GridEPIUrbano.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.GridEPIUrbano.Location = new System.Drawing.Point(0, 6);
+            this.GridEPIUrbano.Name = "GridEPIUrbano";
+            this.GridEPIUrbano.Size = new System.Drawing.Size(748, 315);
+            this.GridEPIUrbano.TabIndex = 1;
+            // 
+            // GridEPIFlorestal
+            // 
+            this.GridEPIFlorestal.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.GridEPIFlorestal.Location = new System.Drawing.Point(0, 6);
+            this.GridEPIFlorestal.Name = "GridEPIFlorestal";
+            this.GridEPIFlorestal.Size = new System.Drawing.Size(748, 315);
+            this.GridEPIFlorestal.TabIndex = 2;
+            // 
+            // GridFarda1
+            // 
+            this.GridFarda1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.GridFarda1.Location = new System.Drawing.Point(0, 6);
+            this.GridFarda1.Name = "GridFarda1";
+            this.GridFarda1.Size = new System.Drawing.Size(748, 315);
+            this.GridFarda1.TabIndex = 2;
+            // 
+            // GridFarda2
+            // 
+            this.GridFarda2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.GridFarda2.Location = new System.Drawing.Point(0, 6);
+            this.GridFarda2.Name = "GridFarda2";
+            this.GridFarda2.Size = new System.Drawing.Size(748, 315);
+            this.GridFarda2.TabIndex = 2;
+            // 
+            // GridFarda3
+            // 
+            this.GridFarda3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.GridFarda3.Location = new System.Drawing.Point(0, 6);
+            this.GridFarda3.Name = "GridFarda3";
+            this.GridFarda3.Size = new System.Drawing.Size(748, 315);
+            this.GridFarda3.TabIndex = 2;
             // 
             // Fardamentos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(787, 453);
-            this.Controls.Add(this.label10);
+            this.Controls.Add(this.lblNameLogin);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.btnDevolucao);
             this.Controls.Add(this.btnAtribuir);
             this.Controls.Add(this.label8);
             this.Controls.Add(label7);
             this.Controls.Add(this.tabControl1);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
+            this.Controls.Add(this.lblNomeBomb);
+            this.Controls.Add(this.lblCatBomb);
+            this.Controls.Add(this.lblNumMecBomb);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnFind);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtFind);
             this.Name = "Fardamentos";
             this.Text = "Fardamentos";
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabControl2.ResumeLayout(false);
+            this.tabPage3.ResumeLayout(false);
+            this.tabPage4.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
             this.tabControl3.ResumeLayout(false);
+            this.tabPage5.ResumeLayout(false);
+            this.tabPage6.ResumeLayout(false);
+            this.tabPage7.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.GridEPIUrbano)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GridEPIFlorestal)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GridFarda1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GridFarda2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GridFarda3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -335,14 +402,14 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtFind;
         private System.Windows.Forms.Button btnFind;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label lblNumMecBomb;
+        private System.Windows.Forms.Label lblCatBomb;
+        private System.Windows.Forms.Label lblNomeBomb;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabControl tabControl2;
@@ -357,8 +424,13 @@
         private System.Windows.Forms.Button btnAtribuir;
         private System.Windows.Forms.Button btnDevolucao;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label lblNameLogin;
         private System.Windows.Forms.TabPage tabPage8;
+        private System.Windows.Forms.DataGridView GridEPIUrbano;
+        private System.Windows.Forms.DataGridView GridEPIFlorestal;
+        private System.Windows.Forms.DataGridView GridFarda1;
+        private System.Windows.Forms.DataGridView GridFarda2;
+        private System.Windows.Forms.DataGridView GridFarda3;
     }
 }
 

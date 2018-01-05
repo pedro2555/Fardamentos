@@ -50,7 +50,7 @@
             this.tabPage7 = new System.Windows.Forms.TabPage();
             this.GridFarda3 = new System.Windows.Forms.DataGridView();
             this.tabPage8 = new System.Windows.Forms.TabPage();
-            this.tabPage9 = new System.Windows.Forms.TabPage();
+            this.tabResultados = new System.Windows.Forms.TabPage();
             this.btnFind = new System.Windows.Forms.Button();
             this.Actions = new System.Windows.Forms.Timer(this.components);
             this.GridResultados = new System.Windows.Forms.DataGridView();
@@ -70,7 +70,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.GridFarda2)).BeginInit();
             this.tabPage7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GridFarda3)).BeginInit();
-            this.tabPage9.SuspendLayout();
+            this.tabResultados.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GridResultados)).BeginInit();
             this.SuspendLayout();
             // 
@@ -124,7 +124,7 @@
             this.tabTop.Controls.Add(this.tabPage1);
             this.tabTop.Controls.Add(this.tabPage2);
             this.tabTop.Controls.Add(this.tabPage8);
-            this.tabTop.Controls.Add(this.tabPage9);
+            this.tabTop.Controls.Add(this.tabResultados);
             this.tabTop.Location = new System.Drawing.Point(7, 45);
             this.tabTop.Name = "tabTop";
             this.tabTop.SelectedIndex = 0;
@@ -279,16 +279,16 @@
             this.tabPage8.Text = "Fardamento Devolvido";
             this.tabPage8.UseVisualStyleBackColor = true;
             // 
-            // tabPage9
+            // tabResultados
             // 
-            this.tabPage9.Controls.Add(this.GridResultados);
-            this.tabPage9.Location = new System.Drawing.Point(4, 22);
-            this.tabPage9.Name = "tabPage9";
-            this.tabPage9.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage9.Size = new System.Drawing.Size(757, 346);
-            this.tabPage9.TabIndex = 3;
-            this.tabPage9.Text = "Resultados Pesquisa";
-            this.tabPage9.UseVisualStyleBackColor = true;
+            this.tabResultados.Controls.Add(this.GridResultados);
+            this.tabResultados.Location = new System.Drawing.Point(4, 22);
+            this.tabResultados.Name = "tabResultados";
+            this.tabResultados.Padding = new System.Windows.Forms.Padding(3);
+            this.tabResultados.Size = new System.Drawing.Size(757, 346);
+            this.tabResultados.TabIndex = 3;
+            this.tabResultados.Text = "Resultados Pesquisa";
+            this.tabResultados.UseVisualStyleBackColor = true;
             // 
             // btnFind
             // 
@@ -343,7 +343,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.GridFarda2)).EndInit();
             this.tabPage7.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.GridFarda3)).EndInit();
-            this.tabPage9.ResumeLayout(false);
+            this.tabResultados.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.GridResultados)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -368,7 +368,7 @@
         private System.Windows.Forms.TabPage tabPage7;
         private System.Windows.Forms.TabPage tabPage8;
         private System.Windows.Forms.Button btnFind;
-        private System.Windows.Forms.TabPage tabPage9;
+        private System.Windows.Forms.TabPage tabResultados;
         private System.Windows.Forms.DataGridView GridEPIUrbano;
         private System.Windows.Forms.Timer Actions;
         private System.Windows.Forms.DataGridView GridEPIFlorestal;

@@ -21,7 +21,6 @@ C:\Users\Tiago\Documents\Visual Studio 2017\Projects\Fardamentos2\bin\Debug\Fard
 C:\Users\Tiago\Documents\Visual Studio 2017\Projects\Fardamentos2\bin\Debug\Fardamentos.pdb
 C:\Users\Tiago\Documents\Visual Studio 2017\Projects\Fardamentos2\bin\Debug\MySql.Data.dll
 C:\Users\Tiago\Documents\Visual Studio 2017\Projects\Fardamentos2\bin\Debug\MySql.Data.xml
-C:\Users\Tiago\Documents\Visual Studio 2017\Projects\Fardamentos2\obj\Debug\Fardamentos.csprojResolveAssemblyReference.cache
 C:\Users\Tiago\Documents\Visual Studio 2017\Projects\Fardamentos2\obj\Debug\Fardamentos.Atribuir.resources
 C:\Users\Tiago\Documents\Visual Studio 2017\Projects\Fardamentos2\obj\Debug\Fardamentos.Devolucao.resources
 C:\Users\Tiago\Documents\Visual Studio 2017\Projects\Fardamentos2\obj\Debug\Fardamentos.Fardamentos.resources
@@ -34,3 +33,4 @@ C:\Users\Tiago\Documents\Visual Studio 2017\Projects\Fardamentos2\obj\Debug\Fard
 C:\Users\Tiago\Documents\Visual Studio 2017\Projects\Fardamentos2\obj\Debug\Fardamentos.csproj.GenerateResource.Cache
 C:\Users\Tiago\Documents\Visual Studio 2017\Projects\Fardamentos2\obj\Debug\Fardamentos.exe
 C:\Users\Tiago\Documents\Visual Studio 2017\Projects\Fardamentos2\obj\Debug\Fardamentos.pdb
+C:\Users\Tiago\Documents\Visual Studio 2017\Projects\Fardamentos2\obj\Debug\Fardamentos.csprojResolveAssemblyReference.cache

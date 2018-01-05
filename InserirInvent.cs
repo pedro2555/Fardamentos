@@ -19,6 +19,7 @@ namespace Fardamentos
             InitializeComponent();
             Responsaveis();
             TipoEquipamento();
+            Equipamento();
             verify.Start();
             Tamanhos();
         }

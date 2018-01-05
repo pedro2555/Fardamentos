@@ -77,7 +77,7 @@ namespace Fardamentos
             {
                 conn.Open();
 
-                string sqlEpiUrbano = "select `nome` as Equipamento, `tam` as Tamanho from inventario LEFT JOIN equipamento ON inventario.equipamento = equipamento.id LEFT JOIN tiposfardamento ON equipamento.tipo = tiposfardamento.tipo LEFT JOIN tamanhos ON inventario.tamanho = tamanhos.id WHERE equipamento.tipo = 1";
+                string sqlEpiUrbano = "select `inventario`.`id` as Referencia, `nome` as Equipamento, `tam` as Tamanho, `obs` as Observações, `condicoes`.`condicao` as Condição from inventario LEFT JOIN condicoes ON inventario.condicao = condicoes.id LEFT JOIN equipamento ON inventario.equipamento = equipamento.id LEFT JOIN tiposfardamento ON equipamento.tipo = tiposfardamento.tipo LEFT JOIN tamanhos ON inventario.tamanho = tamanhos.id WHERE equipamento.tipo = 1 and disponivel = 1";
 
                 MySqlCommand sqlCmd = new MySqlCommand(sqlEpiUrbano, conn);
 
@@ -104,7 +104,7 @@ namespace Fardamentos
             {
                 conn.Open();
 
-                string sqlEPIFlorestal = "select `nome` as Equipamento, `tam` as Tamanho from inventario LEFT JOIN equipamento ON inventario.equipamento = equipamento.id LEFT JOIN tiposfardamento ON equipamento.tipo = tiposfardamento.tipo LEFT JOIN tamanhos ON inventario.tamanho = tamanhos.id WHERE equipamento.tipo = 2";
+                string sqlEPIFlorestal = "select `inventario`.`id` as Referencia, `nome` as Equipamento, `tam` as Tamanho, `obs` as Observações, `condicoes`.`condicao` as Condição from inventario LEFT JOIN condicoes ON inventario.condicao = condicoes.id LEFT JOIN equipamento ON inventario.equipamento = equipamento.id LEFT JOIN tiposfardamento ON equipamento.tipo = tiposfardamento.tipo LEFT JOIN tamanhos ON inventario.tamanho = tamanhos.id WHERE equipamento.tipo = 2 and disponivel = 1";
 
                 MySqlCommand sqlCmd = new MySqlCommand(sqlEPIFlorestal, conn);
 
@@ -131,7 +131,7 @@ namespace Fardamentos
             {
                 conn.Open();
 
-                string sqlFarda1 = "select `nome` as Equipamento, `tam` as Tamanho from inventario LEFT JOIN equipamento ON inventario.equipamento = equipamento.id LEFT JOIN tiposfardamento ON equipamento.tipo = tiposfardamento.tipo LEFT JOIN tamanhos ON inventario.tamanho = tamanhos.id WHERE equipamento.tipo = 3";
+                string sqlFarda1 = "select `inventario`.`id` as Referencia, `nome` as Equipamento, `tam` as Tamanho, `obs` as Observações, `condicoes`.`condicao` as Condição from inventario LEFT JOIN condicoes ON inventario.condicao = condicoes.id LEFT JOIN equipamento ON inventario.equipamento = equipamento.id LEFT JOIN tiposfardamento ON equipamento.tipo = tiposfardamento.tipo LEFT JOIN tamanhos ON inventario.tamanho = tamanhos.id WHERE equipamento.tipo = 3 and disponivel = 1";
 
                 MySqlCommand sqlCmd = new MySqlCommand(sqlFarda1, conn);
 
@@ -158,7 +158,7 @@ namespace Fardamentos
             {
                 conn.Open();
 
-                string sqlFarda2 = "select `nome` as Equipamento, `tam` as Tamanho from inventario LEFT JOIN equipamento ON inventario.equipamento = equipamento.id LEFT JOIN tiposfardamento ON equipamento.tipo = tiposfardamento.tipo LEFT JOIN tamanhos ON inventario.tamanho = tamanhos.id WHERE equipamento.tipo = 4";
+                string sqlFarda2 = "select `inventario`.`id` as Referencia, `nome` as Equipamento, `tam` as Tamanho, `obs` as Observações, `condicoes`.`condicao` as Condição from inventario LEFT JOIN condicoes ON inventario.condicao = condicoes.id LEFT JOIN equipamento ON inventario.equipamento = equipamento.id LEFT JOIN tiposfardamento ON equipamento.tipo = tiposfardamento.tipo LEFT JOIN tamanhos ON inventario.tamanho = tamanhos.id WHERE equipamento.tipo = 4 and disponivel = 1";
 
                 MySqlCommand sqlCmd = new MySqlCommand(sqlFarda2, conn);
 
@@ -185,7 +185,7 @@ namespace Fardamentos
             {
                 conn.Open();
 
-                string sqlFarda3 = "select `nome` as Equipamento, `tam` as Tamanho from inventario LEFT JOIN equipamento ON inventario.equipamento = equipamento.id LEFT JOIN tiposfardamento ON equipamento.tipo = tiposfardamento.tipo LEFT JOIN tamanhos ON inventario.tamanho = tamanhos.id WHERE equipamento.tipo = 5";
+                string sqlFarda3 = "select `inventario`.`id` as Referencia, `nome` as Equipamento, `tam` as Tamanho, `obs` as Observações, `condicoes`.`condicao` as Condição from inventario LEFT JOIN condicoes ON inventario.condicao = condicoes.id LEFT JOIN equipamento ON inventario.equipamento = equipamento.id LEFT JOIN tiposfardamento ON equipamento.tipo = tiposfardamento.tipo LEFT JOIN tamanhos ON inventario.tamanho = tamanhos.id WHERE equipamento.tipo = 5 and disponivel = 1";
 
                 MySqlCommand sqlCmd = new MySqlCommand(sqlFarda3, conn);
 
@@ -213,22 +213,23 @@ namespace Fardamentos
             FillFarda3();
         }
 
-        public void FillResultados()
+        public void FillResultados(int equipamento, int tipoequipamento, int tamanho)
         {
+
             MySqlConnection conn = new MySqlConnection(Database.Database.ConnectionString);
 
             try
             {
-                FindInvent Find = new FindInvent();
+                tabTop.SelectTab(1);
 
                 conn.Open();
 
-                string sqlResultados = "select `nome` as Equipamento, `tam` as Tamanho from inventario LEFT JOIN equipamento ON inventario.equipamento = equipamento.id LEFT JOIN tiposfardamento ON equipamento.tipo = tiposfardamento.tipo LEFT JOIN tamanhos ON inventario.tamanho = tamanhos.id WHERE equipamento.tipo = @tipo and inventario.tamanho = @tamanho and equipamento.tipo = @tipo";
+                string sqlResultados = "select `nome` as Equipamento, `tam` as Tamanho from inventario LEFT JOIN equipamento ON inventario.equipamento = equipamento.id LEFT JOIN tiposfardamento ON equipamento.tipo = tiposfardamento.tipo LEFT JOIN tamanhos ON inventario.tamanho = tamanhos.id WHERE equipamento.id = @equipamento and inventario.tamanho = @tamanho and equipamento.tipo = @tipo";
 
                 MySqlCommand sqlCmd = new MySqlCommand(sqlResultados, conn);
-                //sqlCmd.Parameters.AddWithValue("@equipamento", Find.Equipamento);
-                //sqlCmd.Parameters.AddWithValue("@tipo", Find.TipoEquipamento);
-                //sqlCmd.Parameters.AddWithValue("@tamanho", Find.Tamanho);
+                sqlCmd.Parameters.AddWithValue("@equipamento", equipamento);
+                sqlCmd.Parameters.AddWithValue("@tipo", tipoequipamento);
+                sqlCmd.Parameters.AddWithValue("@tamanho", tamanho);
 
                 MySqlDataAdapter mysqlDs = new MySqlDataAdapter(sqlCmd);
                 DataSet ds = new DataSet();
