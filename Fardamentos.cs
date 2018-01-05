@@ -54,11 +54,9 @@ namespace Fardamentos
 
         private void btnAtribuir_Click(object sender, EventArgs e)
         {
-            Form Atribuir = new Atribuir();
+            var Atribuir = new Atribuir();
 
-            Atribuir A = new Atribuir();
-
-            A.Bombeiro(NumMecanografico);
+            Atribuir.Bombeiro(NumMecanografico);
 
             Atribuir.Show();
         }

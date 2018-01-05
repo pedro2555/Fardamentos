@@ -63,9 +63,8 @@
             this.lblBombNumInt.AutoSize = true;
             this.lblBombNumInt.Location = new System.Drawing.Point(126, 19);
             this.lblBombNumInt.Name = "lblBombNumInt";
-            this.lblBombNumInt.Size = new System.Drawing.Size(25, 13);
+            this.lblBombNumInt.Size = new System.Drawing.Size(0, 13);
             this.lblBombNumInt.TabIndex = 1;
-            this.lblBombNumInt.Text = "522";
             // 
             // label3
             // 
@@ -81,9 +80,8 @@
             this.lblBombNome.AutoSize = true;
             this.lblBombNome.Location = new System.Drawing.Point(173, 19);
             this.lblBombNome.Name = "lblBombNome";
-            this.lblBombNome.Size = new System.Drawing.Size(142, 13);
+            this.lblBombNome.Size = new System.Drawing.Size(0, 13);
             this.lblBombNome.TabIndex = 3;
-            this.lblBombNome.Text = "Tiago Miguel Alonso Vicente";
             // 
             // label5
             // 
@@ -194,9 +192,8 @@
             this.lblRespNome.AutoSize = true;
             this.lblRespNome.Location = new System.Drawing.Point(173, 43);
             this.lblRespNome.Name = "lblRespNome";
-            this.lblRespNome.Size = new System.Drawing.Size(142, 13);
+            this.lblRespNome.Size = new System.Drawing.Size(0, 13);
             this.lblRespNome.TabIndex = 17;
-            this.lblRespNome.Text = "Tiago Miguel Alonso Vicente";
             // 
             // label12
             // 
@@ -212,9 +209,8 @@
             this.lblRespNumInt.AutoSize = true;
             this.lblRespNumInt.Location = new System.Drawing.Point(126, 43);
             this.lblRespNumInt.Name = "lblRespNumInt";
-            this.lblRespNumInt.Size = new System.Drawing.Size(25, 13);
+            this.lblRespNumInt.Size = new System.Drawing.Size(0, 13);
             this.lblRespNumInt.TabIndex = 18;
-            this.lblRespNumInt.Text = "522";
             // 
             // Atribuir
             // 

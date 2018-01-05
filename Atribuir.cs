@@ -83,10 +83,10 @@ namespace Fardamentos
                     while (sqlCmdRes.Read())
                     {
                         string nome = (string)sqlCmdRes[0];
-                        string numint = (string)sqlCmdRes[1];
+                        int numint = (int)sqlCmdRes[1];
 
                         lblBombNome.Text = nome;
-                        lblBombNumInt.Text = numint;
+                        lblBombNumInt.Text = numint.ToString();
                     }
 
             }
