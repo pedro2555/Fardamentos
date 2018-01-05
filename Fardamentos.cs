@@ -14,13 +14,15 @@ namespace Fardamentos
 {
     public partial class Fardamentos : Form
     {
+        public int NumMecanografico { get; private set; }
+
         public Fardamentos()
         {
             InitializeComponent();
 
             this.AcceptButton = btnFind;
 
-            string sqlName = "SELECT `nome` FROM `users` WHERE numint = @numint";
+            string sqlName = "SELECT `nome`, `nummec` FROM `users` WHERE numint = @numint";
             MySqlConnection conn = new MySqlConnection(Database.Database.ConnectionString);
 
             try
@@ -53,6 +55,10 @@ namespace Fardamentos
         private void btnAtribuir_Click(object sender, EventArgs e)
         {
             Form Atribuir = new Atribuir();
+
+            Atribuir A = new Atribuir();
+
+            A.Bombeiro(NumMecanografico);
 
             Atribuir.Show();
         }
@@ -89,6 +95,7 @@ namespace Fardamentos
                         lblNumMecBomb.Text = numMec.ToString();
                         lblCatBomb.Text = posto;
 
+                        NumMecanografico = numMec;
                     }
 
             }

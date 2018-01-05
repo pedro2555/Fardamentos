@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblBombNumInt = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.lblBombNome = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
@@ -44,9 +44,9 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.btnAtribuir = new System.Windows.Forms.Button();
-            this.label11 = new System.Windows.Forms.Label();
+            this.lblRespNome = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
+            this.lblRespNumInt = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -58,14 +58,14 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Bombeiro:";
             // 
-            // label2
+            // lblBombNumInt
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(126, 19);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(25, 13);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "522";
+            this.lblBombNumInt.AutoSize = true;
+            this.lblBombNumInt.Location = new System.Drawing.Point(126, 19);
+            this.lblBombNumInt.Name = "lblBombNumInt";
+            this.lblBombNumInt.Size = new System.Drawing.Size(25, 13);
+            this.lblBombNumInt.TabIndex = 1;
+            this.lblBombNumInt.Text = "522";
             // 
             // label3
             // 
@@ -76,14 +76,14 @@
             this.label3.TabIndex = 2;
             this.label3.Text = "-";
             // 
-            // label4
+            // lblBombNome
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(173, 19);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(142, 13);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "Tiago Miguel Alonso Vicente";
+            this.lblBombNome.AutoSize = true;
+            this.lblBombNome.Location = new System.Drawing.Point(173, 19);
+            this.lblBombNome.Name = "lblBombNome";
+            this.lblBombNome.Size = new System.Drawing.Size(142, 13);
+            this.lblBombNome.TabIndex = 3;
+            this.lblBombNome.Text = "Tiago Miguel Alonso Vicente";
             // 
             // label5
             // 
@@ -189,14 +189,14 @@
             this.btnAtribuir.UseVisualStyleBackColor = true;
             this.btnAtribuir.Click += new System.EventHandler(this.Atribuir_Click);
             // 
-            // label11
+            // lblRespNome
             // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(173, 43);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(142, 13);
-            this.label11.TabIndex = 17;
-            this.label11.Text = "Tiago Miguel Alonso Vicente";
+            this.lblRespNome.AutoSize = true;
+            this.lblRespNome.Location = new System.Drawing.Point(173, 43);
+            this.lblRespNome.Name = "lblRespNome";
+            this.lblRespNome.Size = new System.Drawing.Size(142, 13);
+            this.lblRespNome.TabIndex = 17;
+            this.lblRespNome.Text = "Tiago Miguel Alonso Vicente";
             // 
             // label12
             // 
@@ -207,14 +207,14 @@
             this.label12.TabIndex = 19;
             this.label12.Text = "-";
             // 
-            // label13
+            // lblRespNumInt
             // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(126, 43);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(25, 13);
-            this.label13.TabIndex = 18;
-            this.label13.Text = "522";
+            this.lblRespNumInt.AutoSize = true;
+            this.lblRespNumInt.Location = new System.Drawing.Point(126, 43);
+            this.lblRespNumInt.Name = "lblRespNumInt";
+            this.lblRespNumInt.Size = new System.Drawing.Size(25, 13);
+            this.lblRespNumInt.TabIndex = 18;
+            this.lblRespNumInt.Text = "522";
             // 
             // Atribuir
             // 
@@ -222,8 +222,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(336, 311);
             this.Controls.Add(this.label12);
-            this.Controls.Add(this.label13);
-            this.Controls.Add(this.label11);
+            this.Controls.Add(this.lblRespNumInt);
+            this.Controls.Add(this.lblRespNome);
             this.Controls.Add(this.btnAtribuir);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.textBox1);
@@ -236,9 +236,9 @@
             this.Controls.Add(this.comboBox2);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
+            this.Controls.Add(this.lblBombNome);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.lblBombNumInt);
             this.Controls.Add(this.label1);
             this.Name = "Atribuir";
             this.Text = "Atribuir";
@@ -250,9 +250,9 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblBombNumInt;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lblBombNome;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ComboBox comboBox2;
@@ -265,8 +265,8 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Button btnAtribuir;
-        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label lblRespNome;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label lblRespNumInt;
     }
 }
