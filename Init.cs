@@ -15,6 +15,8 @@ namespace Fardamentos
         public Init()
         {
             InitializeComponent();
+            lblDateInit.Text = DateTime.UtcNow.ToString();
+            Clock.Start();
         }
 
         private void btnMovimentos_Click(object sender, EventArgs e)
@@ -30,6 +32,26 @@ namespace Fardamentos
             Form Inventario = new Inventario();
 
             Inventario.Show();
+        }
+
+        private void Init_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void Clock_Tick(object sender, EventArgs e)
+        {
+            lblDateInit.Text = DateTime.UtcNow.ToString();
+        }
+
+        private void btnSair_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Tem a certeza que pertende sair?",
+                     "Fechar", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation,
+                     MessageBoxDefaultButton.Button2) == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
         }
     }
 }

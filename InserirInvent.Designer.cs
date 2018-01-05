@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.btnInserir = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.comboBox5 = new System.Windows.Forms.ComboBox();
+            this.txtObs = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.cboxTamanhos = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
@@ -43,6 +43,8 @@
             this.lblNumInt = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.lblNameResp = new System.Windows.Forms.Label();
+            this.txtQuantidade = new System.Windows.Forms.TextBox();
+            this.verify = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // btnInserir
@@ -64,21 +66,13 @@
             this.label10.TabIndex = 32;
             this.label10.Text = "Observações :";
             // 
-            // textBox1
+            // txtObs
             // 
-            this.textBox1.Location = new System.Drawing.Point(129, 122);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(186, 102);
-            this.textBox1.TabIndex = 31;
-            // 
-            // comboBox5
-            // 
-            this.comboBox5.FormattingEnabled = true;
-            this.comboBox5.Location = new System.Drawing.Point(271, 95);
-            this.comboBox5.Name = "comboBox5";
-            this.comboBox5.Size = new System.Drawing.Size(44, 21);
-            this.comboBox5.TabIndex = 30;
+            this.txtObs.Location = new System.Drawing.Point(129, 122);
+            this.txtObs.Multiline = true;
+            this.txtObs.Name = "txtObs";
+            this.txtObs.Size = new System.Drawing.Size(186, 102);
+            this.txtObs.TabIndex = 31;
             // 
             // label9
             // 
@@ -152,7 +146,7 @@
             // lblNumInt
             // 
             this.lblNumInt.AutoSize = true;
-            this.lblNumInt.Location = new System.Drawing.Point(126, 15);
+            this.lblNumInt.Location = new System.Drawing.Point(129, 15);
             this.lblNumInt.Name = "lblNumInt";
             this.lblNumInt.Size = new System.Drawing.Size(0, 13);
             this.lblNumInt.TabIndex = 35;
@@ -174,18 +168,31 @@
             this.lblNameResp.Size = new System.Drawing.Size(0, 13);
             this.lblNameResp.TabIndex = 37;
             // 
+            // txtQuantidade
+            // 
+            this.txtQuantidade.Location = new System.Drawing.Point(271, 95);
+            this.txtQuantidade.Name = "txtQuantidade";
+            this.txtQuantidade.Size = new System.Drawing.Size(44, 20);
+            this.txtQuantidade.TabIndex = 38;
+            this.txtQuantidade.Text = "1";
+            // 
+            // verify
+            // 
+            this.verify.Interval = 1000;
+            this.verify.Tick += new System.EventHandler(this.verify_Tick);
+            // 
             // InserirInvent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(327, 273);
+            this.Controls.Add(this.txtQuantidade);
             this.Controls.Add(this.lblNameResp);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.lblNumInt);
             this.Controls.Add(this.btnInserir);
             this.Controls.Add(this.label10);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.comboBox5);
+            this.Controls.Add(this.txtObs);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.cboxTamanhos);
             this.Controls.Add(this.label8);
@@ -205,8 +212,7 @@
 
         private System.Windows.Forms.Button btnInserir;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.ComboBox comboBox5;
+        private System.Windows.Forms.TextBox txtObs;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.ComboBox cboxTamanhos;
         private System.Windows.Forms.Label label8;
@@ -218,5 +224,7 @@
         private System.Windows.Forms.Label lblNumInt;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label lblNameResp;
+        private System.Windows.Forms.TextBox txtQuantidade;
+        private System.Windows.Forms.Timer verify;
     }
 }

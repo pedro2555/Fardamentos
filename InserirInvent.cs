@@ -19,26 +19,39 @@ namespace Fardamentos
             InitializeComponent();
             Responsaveis();
             TipoEquipamento();
-            Equipamento();
+            verify.Start();
             Tamanhos();
         }
 
         private void btnAtribuir_Click(object sender, EventArgs e)
         {
+            int copies = 0; 
+
+            if (Convert.ToInt32(txtQuantidade.Text) >= 1) 
+                copies = Convert.ToInt32(txtQuantidade.Text) - 1;           
+            else           
+                MessageBox.Show("Insira a Quantidade.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+
+            int i;
 
             MySqlConnection conn = new MySqlConnection(Database.Database.ConnectionString);
 
             try
             {
                 conn.Open();
-                string sqlInserirFardamento = "INSERT INTO `inventario` ( `tipo` , `equipamento` , `tamanho`) VALUES(@tipo, @equipamento, @tamanho)";
+                string sqlInserirFardamento = "INSERT INTO `inventario` ( `equipamento` , `tamanho`, `obs`, `responsavel`, `dataentrada`) VALUES(@equipamento, @tamanho, @obs, @responsavel, NOW())";
                 MySqlCommand sqlCmd = new MySqlCommand(sqlInserirFardamento, conn);
 
-                sqlCmd.Parameters.AddWithValue("@tipo", cboxTipoEquipamento.SelectedItem);
-                sqlCmd.Parameters.AddWithValue("@equipamento", cboxEquipamento.SelectedItem);
-                sqlCmd.Parameters.AddWithValue("@tamanho", cboxTamanhos.SelectedItem);
-                sqlCmd.ExecuteNonQuery();
+                sqlCmd.Parameters.AddWithValue("@equipamento", cboxEquipamento.SelectedValue);
+                sqlCmd.Parameters.AddWithValue("@tamanho", cboxTamanhos.SelectedValue);
+                sqlCmd.Parameters.AddWithValue("@obs", txtObs.Text);
+                sqlCmd.Parameters.AddWithValue("@responsavel", lblNumInt.Text);
 
+                for (i = 0; i <= copies; i++)
+                {
+                    sqlCmd.ExecuteNonQuery();
+                }
             }
             catch (Exception crap)
             {
@@ -58,34 +71,29 @@ namespace Fardamentos
 
             lblNumInt.Text = NumInt;
 
-            string result = null;
-            string sqlStrGetFlight = "SELECT `nome` FROM `users WHERE numint = @numint";
+            string sqlInsertEquip = "SELECT `nome` FROM `users` WHERE numint = @numint";
             MySqlConnection conn = new MySqlConnection(Database.Database.ConnectionString);
             
             try
             {
                 conn.Open();
 
-                
-                // GET FLIGHT DATA
-                MySqlCommand sqlCmd = new MySqlCommand(sqlStrGetFlight, conn);
+                MySqlCommand sqlCmd = new MySqlCommand(sqlInsertEquip, conn);
                 sqlCmd.Parameters.AddWithValue("@numint", Properties.Settings.Default.NumInt);
 
                 MySqlDataReader sqlCmdRes = sqlCmd.ExecuteReader();
                 if (sqlCmdRes.HasRows)
                     while (sqlCmdRes.Read())
                     {
-                        result = (string)sqlCmdRes[0];
+                        string result = (string)sqlCmdRes[0];
                         lblNameResp.Text = result;
                     }
-                else
-                    result = null;
+
             }
             catch (Exception crap)
             {
-                result = null;
                 // pass the exception to the caller with an usefull message
-                throw new Exception(String.Format("Failed to load flight plan for user {0}.\r\nSQL Statements: {1}", Properties.Settings.Default.NumInt, sqlStrGetFlight), crap);
+                throw new Exception(String.Format("Failed to load flight plan for user {0}.\r\nSQL Statements: {1}", Properties.Settings.Default.NumInt, sqlInsertEquip), crap);
             }
             finally
             {
@@ -109,9 +117,9 @@ namespace Fardamentos
                 MySqlDataAdapter mysqlDs = new MySqlDataAdapter(sqlCmd);
                 DataSet ds = new DataSet();
                 mysqlDs.Fill(ds);
-                cboxEquipamento.DataSource = ds.Tables[0];
-                cboxEquipamento.ValueMember = "id";
-                cboxEquipamento.DisplayMember = "tipo";
+                cboxTipoEquipamento.DataSource = ds.Tables[0];
+                cboxTipoEquipamento.ValueMember = "id";
+                cboxTipoEquipamento.DisplayMember = "tipo";
             }
             catch (Exception crap)
             {
@@ -131,24 +139,17 @@ namespace Fardamentos
             {
                 conn.Open();
 
-                string query = "SELECT `id`, `nome` FROM equipamento";
-                MySqlCommand cmd;
+                string sqlEquipamento = "SELECT `id`, `nome` FROM equipamento WHERE tipo = @tipo";
 
-                cmd = new MySqlCommand(query, conn);
+                MySqlCommand sqlCmd = new MySqlCommand(sqlEquipamento, conn);
+                sqlCmd.Parameters.AddWithValue("@tipo", cboxTipoEquipamento.SelectedValue);
 
-                MySqlDataAdapter da = new MySqlDataAdapter(cmd);
-                DataTable table = new DataTable("tamanhos");
-                da.Fill(table);
-
-                foreach (DataRow row in table.Rows)
-                {
-                    for (int i = 0; i < row.ItemArray.Length; i++)
-                    {
-                        cboxEquipamento.Items.Add(row.ItemArray[1].ToString());
-
-                    }
-                }
-
+                MySqlDataAdapter mysqlDs = new MySqlDataAdapter(sqlCmd);
+                DataSet ds = new DataSet();
+                mysqlDs.Fill(ds);
+                cboxEquipamento.DataSource = ds.Tables[0];
+                cboxEquipamento.ValueMember = "id";
+                cboxEquipamento.DisplayMember = "nome";
             }
             catch (Exception crap)
             {
@@ -168,24 +169,16 @@ namespace Fardamentos
             {
                 conn.Open();
 
-                string query = "SELECT `id`, `tam` FROM tamanhos";
-                MySqlCommand cmd;
+                string sqlTamanhos = "SELECT `id`, `tam` FROM tamanhos";
 
-                cmd = new MySqlCommand(query, conn);
+                MySqlCommand sqlCmd = new MySqlCommand(sqlTamanhos, conn);
 
-                MySqlDataAdapter da = new MySqlDataAdapter(cmd);
-                DataTable table = new DataTable("tamanhos");
-                da.Fill(table);
-
-                foreach (DataRow row in table.Rows)
-                {
-                    for (int i = 0; i < row.ItemArray.Length; i++)
-                    {
-                        cboxTamanhos.Items.Add(row.ItemArray[1].ToString());
-
-                    }
-                }
-
+                MySqlDataAdapter mysqlDs = new MySqlDataAdapter(sqlCmd);
+                DataSet ds = new DataSet();
+                mysqlDs.Fill(ds);
+                cboxTamanhos.DataSource = ds.Tables[0];
+                cboxTamanhos.ValueMember = "id";
+                cboxTamanhos.DisplayMember = "tam";
             }
             catch (Exception crap)
             {
@@ -195,6 +188,11 @@ namespace Fardamentos
             {
                 conn.Close();
             }
+        }
+
+        private void verify_Tick(object sender, EventArgs e)
+        {
+            Equipamento();
         }
     }
 }

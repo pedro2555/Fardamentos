@@ -28,33 +28,47 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.Label label7;
-            this.label10 = new System.Windows.Forms.Label();
+            this.lblNameLogin = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.btnAtribuir = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
-            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabTop = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabControl2 = new System.Windows.Forms.TabControl();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.GridEPIUrbano = new System.Windows.Forms.DataGridView();
             this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.GridEPIFlorestal = new System.Windows.Forms.DataGridView();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tabControl3 = new System.Windows.Forms.TabControl();
             this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.GridFarda1 = new System.Windows.Forms.DataGridView();
             this.tabPage6 = new System.Windows.Forms.TabPage();
+            this.GridFarda2 = new System.Windows.Forms.DataGridView();
             this.tabPage7 = new System.Windows.Forms.TabPage();
+            this.GridFarda3 = new System.Windows.Forms.DataGridView();
             this.tabPage8 = new System.Windows.Forms.TabPage();
             this.tabPage9 = new System.Windows.Forms.TabPage();
             this.btnFind = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Actions = new System.Windows.Forms.Timer(this.components);
             label7 = new System.Windows.Forms.Label();
-            this.tabControl1.SuspendLayout();
+            this.tabTop.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabControl2.SuspendLayout();
             this.tabPage3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.GridEPIUrbano)).BeginInit();
+            this.tabPage4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.GridEPIFlorestal)).BeginInit();
             this.tabPage2.SuspendLayout();
             this.tabControl3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.tabPage5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.GridFarda1)).BeginInit();
+            this.tabPage6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.GridFarda2)).BeginInit();
+            this.tabPage7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.GridFarda3)).BeginInit();
             this.SuspendLayout();
             // 
             // label7
@@ -66,14 +80,13 @@
             label7.TabIndex = 24;
             label7.Text = "Desenvolvido por: Tiago Vicente";
             // 
-            // label10
+            // lblNameLogin
             // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(50, 420);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(73, 13);
-            this.label10.TabIndex = 29;
-            this.label10.Text = "Tiago Vicente";
+            this.lblNameLogin.AutoSize = true;
+            this.lblNameLogin.Location = new System.Drawing.Point(50, 420);
+            this.lblNameLogin.Name = "lblNameLogin";
+            this.lblNameLogin.Size = new System.Drawing.Size(0, 13);
+            this.lblNameLogin.TabIndex = 29;
             // 
             // label9
             // 
@@ -103,17 +116,17 @@
             this.label8.TabIndex = 25;
             this.label8.Text = "© 2018";
             // 
-            // tabControl1
+            // tabTop
             // 
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Controls.Add(this.tabPage8);
-            this.tabControl1.Controls.Add(this.tabPage9);
-            this.tabControl1.Location = new System.Drawing.Point(7, 45);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(765, 372);
-            this.tabControl1.TabIndex = 23;
+            this.tabTop.Controls.Add(this.tabPage1);
+            this.tabTop.Controls.Add(this.tabPage2);
+            this.tabTop.Controls.Add(this.tabPage8);
+            this.tabTop.Controls.Add(this.tabPage9);
+            this.tabTop.Location = new System.Drawing.Point(7, 45);
+            this.tabTop.Name = "tabTop";
+            this.tabTop.SelectedIndex = 0;
+            this.tabTop.Size = new System.Drawing.Size(765, 372);
+            this.tabTop.TabIndex = 23;
             // 
             // tabPage1
             // 
@@ -138,7 +151,7 @@
             // 
             // tabPage3
             // 
-            this.tabPage3.Controls.Add(this.dataGridView1);
+            this.tabPage3.Controls.Add(this.GridEPIUrbano);
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
@@ -147,8 +160,17 @@
             this.tabPage3.Text = "Urbanos";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
+            // GridEPIUrbano
+            // 
+            this.GridEPIUrbano.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.GridEPIUrbano.Location = new System.Drawing.Point(2, 6);
+            this.GridEPIUrbano.Name = "GridEPIUrbano";
+            this.GridEPIUrbano.Size = new System.Drawing.Size(748, 315);
+            this.GridEPIUrbano.TabIndex = 0;
+            // 
             // tabPage4
             // 
+            this.tabPage4.Controls.Add(this.GridEPIFlorestal);
             this.tabPage4.Location = new System.Drawing.Point(4, 22);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
@@ -156,6 +178,14 @@
             this.tabPage4.TabIndex = 1;
             this.tabPage4.Text = "Florestais";
             this.tabPage4.UseVisualStyleBackColor = true;
+            // 
+            // GridEPIFlorestal
+            // 
+            this.GridEPIFlorestal.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.GridEPIFlorestal.Location = new System.Drawing.Point(2, 6);
+            this.GridEPIFlorestal.Name = "GridEPIFlorestal";
+            this.GridEPIFlorestal.Size = new System.Drawing.Size(748, 315);
+            this.GridEPIFlorestal.TabIndex = 1;
             // 
             // tabPage2
             // 
@@ -173,7 +203,7 @@
             this.tabControl3.Controls.Add(this.tabPage5);
             this.tabControl3.Controls.Add(this.tabPage6);
             this.tabControl3.Controls.Add(this.tabPage7);
-            this.tabControl3.Location = new System.Drawing.Point(0, 0);
+            this.tabControl3.Location = new System.Drawing.Point(1, 0);
             this.tabControl3.Name = "tabControl3";
             this.tabControl3.SelectedIndex = 0;
             this.tabControl3.Size = new System.Drawing.Size(777, 360);
@@ -181,6 +211,7 @@
             // 
             // tabPage5
             // 
+            this.tabPage5.Controls.Add(this.GridFarda1);
             this.tabPage5.Location = new System.Drawing.Point(4, 22);
             this.tabPage5.Name = "tabPage5";
             this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
@@ -189,8 +220,17 @@
             this.tabPage5.Text = "Farda Nº1";
             this.tabPage5.UseVisualStyleBackColor = true;
             // 
+            // GridFarda1
+            // 
+            this.GridFarda1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.GridFarda1.Location = new System.Drawing.Point(0, 6);
+            this.GridFarda1.Name = "GridFarda1";
+            this.GridFarda1.Size = new System.Drawing.Size(748, 315);
+            this.GridFarda1.TabIndex = 2;
+            // 
             // tabPage6
             // 
+            this.tabPage6.Controls.Add(this.GridFarda2);
             this.tabPage6.Location = new System.Drawing.Point(4, 22);
             this.tabPage6.Name = "tabPage6";
             this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
@@ -199,8 +239,17 @@
             this.tabPage6.Text = "Farda Nº2";
             this.tabPage6.UseVisualStyleBackColor = true;
             // 
+            // GridFarda2
+            // 
+            this.GridFarda2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.GridFarda2.Location = new System.Drawing.Point(0, 6);
+            this.GridFarda2.Name = "GridFarda2";
+            this.GridFarda2.Size = new System.Drawing.Size(748, 315);
+            this.GridFarda2.TabIndex = 3;
+            // 
             // tabPage7
             // 
+            this.tabPage7.Controls.Add(this.GridFarda3);
             this.tabPage7.Location = new System.Drawing.Point(4, 22);
             this.tabPage7.Name = "tabPage7";
             this.tabPage7.Padding = new System.Windows.Forms.Padding(3);
@@ -208,6 +257,14 @@
             this.tabPage7.TabIndex = 2;
             this.tabPage7.Text = "Farda Nº3";
             this.tabPage7.UseVisualStyleBackColor = true;
+            // 
+            // GridFarda3
+            // 
+            this.GridFarda3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.GridFarda3.Location = new System.Drawing.Point(0, 6);
+            this.GridFarda3.Name = "GridFarda3";
+            this.GridFarda3.Size = new System.Drawing.Size(748, 315);
+            this.GridFarda3.TabIndex = 3;
             // 
             // tabPage8
             // 
@@ -239,13 +296,10 @@
             this.btnFind.UseVisualStyleBackColor = true;
             this.btnFind.Click += new System.EventHandler(this.btnFind_Click);
             // 
-            // dataGridView1
+            // Actions
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(2, 6);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(748, 315);
-            this.dataGridView1.TabIndex = 0;
+            this.Actions.Interval = 1000;
+            this.Actions.Tick += new System.EventHandler(this.Actions_Tick);
             // 
             // Inventario
             // 
@@ -253,21 +307,29 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(780, 439);
             this.Controls.Add(this.btnFind);
-            this.Controls.Add(this.label10);
+            this.Controls.Add(this.lblNameLogin);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.btnAtribuir);
             this.Controls.Add(this.label8);
             this.Controls.Add(label7);
-            this.Controls.Add(this.tabControl1);
+            this.Controls.Add(this.tabTop);
             this.Name = "Inventario";
-            this.Text = "{";
-            this.tabControl1.ResumeLayout(false);
+            this.Text = "Inventário";
+            this.tabTop.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabControl2.ResumeLayout(false);
             this.tabPage3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.GridEPIUrbano)).EndInit();
+            this.tabPage4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.GridEPIFlorestal)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabControl3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.tabPage5.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.GridFarda1)).EndInit();
+            this.tabPage6.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.GridFarda2)).EndInit();
+            this.tabPage7.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.GridFarda3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -275,11 +337,11 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label lblNameLogin;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button btnAtribuir;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabControl tabTop;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabControl tabControl2;
         private System.Windows.Forms.TabPage tabPage3;
@@ -292,6 +354,11 @@
         private System.Windows.Forms.TabPage tabPage8;
         private System.Windows.Forms.Button btnFind;
         private System.Windows.Forms.TabPage tabPage9;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView GridEPIUrbano;
+        private System.Windows.Forms.Timer Actions;
+        private System.Windows.Forms.DataGridView GridEPIFlorestal;
+        private System.Windows.Forms.DataGridView GridFarda1;
+        private System.Windows.Forms.DataGridView GridFarda2;
+        private System.Windows.Forms.DataGridView GridFarda3;
     }
 }
