@@ -53,6 +53,7 @@
             this.tabPage9 = new System.Windows.Forms.TabPage();
             this.btnFind = new System.Windows.Forms.Button();
             this.Actions = new System.Windows.Forms.Timer(this.components);
+            this.GridResultados = new System.Windows.Forms.DataGridView();
             label7 = new System.Windows.Forms.Label();
             this.tabTop.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -69,6 +70,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.GridFarda2)).BeginInit();
             this.tabPage7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GridFarda3)).BeginInit();
+            this.tabPage9.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.GridResultados)).BeginInit();
             this.SuspendLayout();
             // 
             // label7
@@ -278,6 +281,7 @@
             // 
             // tabPage9
             // 
+            this.tabPage9.Controls.Add(this.GridResultados);
             this.tabPage9.Location = new System.Drawing.Point(4, 22);
             this.tabPage9.Name = "tabPage9";
             this.tabPage9.Padding = new System.Windows.Forms.Padding(3);
@@ -300,6 +304,15 @@
             // 
             this.Actions.Interval = 1000;
             this.Actions.Tick += new System.EventHandler(this.Actions_Tick);
+            // 
+            // GridResultados
+            // 
+            this.GridResultados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.GridResultados.Cursor = System.Windows.Forms.Cursors.Default;
+            this.GridResultados.Location = new System.Drawing.Point(3, 28);
+            this.GridResultados.Name = "GridResultados";
+            this.GridResultados.Size = new System.Drawing.Size(748, 315);
+            this.GridResultados.TabIndex = 1;
             // 
             // Inventario
             // 
@@ -330,6 +343,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.GridFarda2)).EndInit();
             this.tabPage7.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.GridFarda3)).EndInit();
+            this.tabPage9.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.GridResultados)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -360,5 +375,6 @@
         private System.Windows.Forms.DataGridView GridFarda1;
         private System.Windows.Forms.DataGridView GridFarda2;
         private System.Windows.Forms.DataGridView GridFarda3;
+        private System.Windows.Forms.DataGridView GridResultados;
     }
 }

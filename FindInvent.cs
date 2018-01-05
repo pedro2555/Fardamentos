@@ -16,13 +16,13 @@ namespace Fardamentos
     {
         public class Find
         {
-            public object TipoEquipamento
+            public int TipoEquipamento
             { get; set; }
 
-            public object Equipamento
+            public int Equipamento
             { get; set; }
 
-            public object Tamanho
+            public int Tamanho
             { get; set; }
 
             public Find() { }
@@ -38,12 +38,16 @@ namespace Fardamentos
 
         private void btnFindInvent_Click(object sender, EventArgs e)
         {
+            Inventario Inventario = new Inventario();
+
             Find result = new Find();
 
-            result.TipoEquipamento = cboxTipoEquipamento.SelectedValue;
-            result.Equipamento = cboxEquipamento.SelectedValue;
-            result.Tamanho = cboxTamanho.SelectedValue;
-            Inventario.tabTop.SelectTab(0);
+            result.TipoEquipamento = Convert.ToInt32(cboxTipoEquipamento.SelectedValue);
+            result.Equipamento = Convert.ToInt32(cboxEquipamento.SelectedValue);
+            result.Tamanho = Convert.ToInt32(cboxTamanho.SelectedValue);
+
+            Inventario.FillResultados();
+
 
         }
 
@@ -140,7 +144,7 @@ namespace Fardamentos
             }
         }
 
-            private void verify_Tick(object sender, EventArgs e)
+        private void verify_Tick(object sender, EventArgs e)
         {
             Equipamento();
             Tamanho();

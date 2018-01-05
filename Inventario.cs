@@ -13,9 +13,7 @@ namespace Fardamentos
 {
     public partial class Inventario : Form
     {
-        public string TabTopFind
-        { get; set; }
-
+       
         public Inventario()
         {
             InitializeComponent();
@@ -214,5 +212,38 @@ namespace Fardamentos
             FillFarda2();
             FillFarda3();
         }
+
+        public void FillResultados()
+        {
+            MySqlConnection conn = new MySqlConnection(Database.Database.ConnectionString);
+
+            try
+            {
+                FindInvent Find = new FindInvent();
+
+                conn.Open();
+
+                string sqlResultados = "select `nome` as Equipamento, `tam` as Tamanho from inventario LEFT JOIN equipamento ON inventario.equipamento = equipamento.id LEFT JOIN tiposfardamento ON equipamento.tipo = tiposfardamento.tipo LEFT JOIN tamanhos ON inventario.tamanho = tamanhos.id WHERE equipamento.tipo = @tipo and inventario.tamanho = @tamanho and equipamento.tipo = @tipo";
+
+                MySqlCommand sqlCmd = new MySqlCommand(sqlResultados, conn);
+                //sqlCmd.Parameters.AddWithValue("@equipamento", Find.Equipamento);
+                //sqlCmd.Parameters.AddWithValue("@tipo", Find.TipoEquipamento);
+                //sqlCmd.Parameters.AddWithValue("@tamanho", Find.Tamanho);
+
+                MySqlDataAdapter mysqlDs = new MySqlDataAdapter(sqlCmd);
+                DataSet ds = new DataSet();
+                mysqlDs.Fill(ds);
+                GridResultados.DataSource = ds.Tables[0];
+            }
+            catch (Exception crap)
+            {
+                MessageBox.Show(crap.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
+
     }
 }
