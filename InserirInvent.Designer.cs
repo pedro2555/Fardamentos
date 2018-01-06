@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.btnInserir = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
             this.txtObs = new System.Windows.Forms.TextBox();
@@ -44,7 +43,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.lblNameResp = new System.Windows.Forms.Label();
             this.txtQuantidade = new System.Windows.Forms.TextBox();
-            this.verify = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // btnInserir
@@ -107,6 +105,7 @@
             this.cboxEquipamento.Name = "cboxEquipamento";
             this.cboxEquipamento.Size = new System.Drawing.Size(186, 21);
             this.cboxEquipamento.TabIndex = 26;
+            this.cboxEquipamento.SelectedIndexChanged += new System.EventHandler(this.cboxEquipamento_SelectedIndexChanged);
             // 
             // label7
             // 
@@ -176,11 +175,6 @@
             this.txtQuantidade.TabIndex = 38;
             this.txtQuantidade.Text = "1";
             // 
-            // verify
-            // 
-            this.verify.Interval = 1000;
-            this.verify.Tick += new System.EventHandler(this.verify_Tick);
-            // 
             // InserirInvent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -225,6 +219,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label lblNameResp;
         private System.Windows.Forms.TextBox txtQuantidade;
-        private System.Windows.Forms.Timer verify;
+
     }
 }

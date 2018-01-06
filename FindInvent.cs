@@ -22,6 +22,15 @@ namespace Fardamentos
 
         }
 
+        public class FillResultadosEventArgs:EventArgs
+        {
+            public Find result;
+        }
+
+        public delegate void FillResultadosEventHandler(object sender, FillResultadosEventArgs e);
+
+        public event FillResultadosEventHandler FillResultados;
+
         public FindInvent()
         {
             InitializeComponent();
@@ -31,17 +40,20 @@ namespace Fardamentos
 
         private void btnFindInvent_Click(object sender, EventArgs e)
         {
-            Inventario Inventario = new Inventario();
-
             Find result = new Find();
 
             result.TipoEquipamento = Convert.ToInt32(cboxTipoEquipamento.SelectedValue);
             result.Equipamento = Convert.ToInt32(cboxEquipamento.SelectedValue);
             result.Tamanho = Convert.ToInt32(cboxTamanho.SelectedValue);
 
-            Inventario.FillResultados(result.Equipamento, result.TipoEquipamento, result.Tamanho);
-               
+            FillResultadosEventArgs Args = new FillResultadosEventArgs();
 
+            Args.result = result;
+            
+            FillResultados(this, Args);
+
+            Hide();
+               
         }
       
 

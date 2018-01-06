@@ -34,12 +34,10 @@
             this.lblBombNome = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.cboxTipoEquipamento = new System.Windows.Forms.ComboBox();
+            this.cboxEquipamento = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.comboBox5 = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
@@ -47,6 +45,10 @@
             this.lblRespNome = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.lblRespNumInt = new System.Windows.Forms.Label();
+            this.txtCondicao = new System.Windows.Forms.TextBox();
+            this.txtReference = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtTamanhos = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -101,21 +103,23 @@
             this.label6.TabIndex = 6;
             this.label6.Text = "Tipo de Equipamento:";
             // 
-            // comboBox2
+            // cboxTipoEquipamento
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(129, 69);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(186, 21);
-            this.comboBox2.TabIndex = 7;
+            this.cboxTipoEquipamento.FormattingEnabled = true;
+            this.cboxTipoEquipamento.Location = new System.Drawing.Point(129, 69);
+            this.cboxTipoEquipamento.Name = "cboxTipoEquipamento";
+            this.cboxTipoEquipamento.Size = new System.Drawing.Size(186, 21);
+            this.cboxTipoEquipamento.TabIndex = 7;
+            this.cboxTipoEquipamento.SelectedValueChanged += new System.EventHandler(this.cboxTipoEquipamento_SelectedValueChanged);
             // 
-            // comboBox3
+            // cboxEquipamento
             // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(129, 96);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(186, 21);
-            this.comboBox3.TabIndex = 9;
+            this.cboxEquipamento.FormattingEnabled = true;
+            this.cboxEquipamento.Location = new System.Drawing.Point(129, 96);
+            this.cboxEquipamento.Name = "cboxEquipamento";
+            this.cboxEquipamento.Size = new System.Drawing.Size(186, 21);
+            this.cboxEquipamento.TabIndex = 9;
+            this.cboxEquipamento.SelectedValueChanged += new System.EventHandler(this.cboxEquipamento_SelectedValueChanged);
             // 
             // label7
             // 
@@ -126,14 +130,6 @@
             this.label7.TabIndex = 8;
             this.label7.Text = "Equipamento :";
             // 
-            // comboBox4
-            // 
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(129, 123);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(58, 21);
-            this.comboBox4.TabIndex = 11;
-            // 
             // label8
             // 
             this.label8.AutoSize = true;
@@ -143,26 +139,18 @@
             this.label8.TabIndex = 10;
             this.label8.Text = "Tamanho :";
             // 
-            // comboBox5
-            // 
-            this.comboBox5.FormattingEnabled = true;
-            this.comboBox5.Location = new System.Drawing.Point(271, 123);
-            this.comboBox5.Name = "comboBox5";
-            this.comboBox5.Size = new System.Drawing.Size(44, 21);
-            this.comboBox5.TabIndex = 13;
-            // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.Location = new System.Drawing.Point(197, 126);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(68, 13);
+            this.label9.Size = new System.Drawing.Size(55, 13);
             this.label9.TabIndex = 12;
-            this.label9.Text = "Quantidade :";
+            this.label9.Text = "Condição:";
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(129, 150);
+            this.textBox1.Location = new System.Drawing.Point(129, 177);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(186, 102);
@@ -171,7 +159,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(47, 193);
+            this.label10.Location = new System.Drawing.Point(47, 220);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(76, 13);
             this.label10.TabIndex = 15;
@@ -179,7 +167,7 @@
             // 
             // btnAtribuir
             // 
-            this.btnAtribuir.Location = new System.Drawing.Point(240, 271);
+            this.btnAtribuir.Location = new System.Drawing.Point(240, 298);
             this.btnAtribuir.Name = "btnAtribuir";
             this.btnAtribuir.Size = new System.Drawing.Size(75, 23);
             this.btnAtribuir.TabIndex = 16;
@@ -212,24 +200,61 @@
             this.lblRespNumInt.Size = new System.Drawing.Size(0, 13);
             this.lblRespNumInt.TabIndex = 18;
             // 
+            // txtCondicao
+            // 
+            this.txtCondicao.Location = new System.Drawing.Point(249, 123);
+            this.txtCondicao.Name = "txtCondicao";
+            this.txtCondicao.ReadOnly = true;
+            this.txtCondicao.Size = new System.Drawing.Size(66, 20);
+            this.txtCondicao.TabIndex = 39;
+            // 
+            // txtReference
+            // 
+            this.txtReference.Location = new System.Drawing.Point(129, 151);
+            this.txtReference.Name = "txtReference";
+            this.txtReference.ReadOnly = true;
+            this.txtReference.Size = new System.Drawing.Size(62, 20);
+            this.txtReference.TabIndex = 41;
+            this.txtReference.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(55, 154);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(65, 13);
+            this.label2.TabIndex = 40;
+            this.label2.Text = "Referencia :";
+            // 
+            // txtTamanhos
+            // 
+            this.txtTamanhos.Location = new System.Drawing.Point(129, 123);
+            this.txtTamanhos.Name = "txtTamanhos";
+            this.txtTamanhos.ReadOnly = true;
+            this.txtTamanhos.Size = new System.Drawing.Size(62, 20);
+            this.txtTamanhos.TabIndex = 42;
+            this.txtTamanhos.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // Atribuir
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(336, 311);
+            this.ClientSize = new System.Drawing.Size(336, 334);
+            this.Controls.Add(this.txtTamanhos);
+            this.Controls.Add(this.txtReference);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.txtCondicao);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.lblRespNumInt);
             this.Controls.Add(this.lblRespNome);
             this.Controls.Add(this.btnAtribuir);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.comboBox5);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.comboBox4);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.comboBox3);
+            this.Controls.Add(this.cboxEquipamento);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.comboBox2);
+            this.Controls.Add(this.cboxTipoEquipamento);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.lblBombNome);
@@ -251,12 +276,10 @@
         private System.Windows.Forms.Label lblBombNome;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.ComboBox cboxTipoEquipamento;
+        private System.Windows.Forms.ComboBox cboxEquipamento;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.ComboBox comboBox4;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.ComboBox comboBox5;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label10;
@@ -264,5 +287,9 @@
         private System.Windows.Forms.Label lblRespNome;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label lblRespNumInt;
+        private System.Windows.Forms.TextBox txtCondicao;
+        private System.Windows.Forms.TextBox txtReference;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox txtTamanhos;
     }
 }

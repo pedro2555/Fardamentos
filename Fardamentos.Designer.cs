@@ -41,38 +41,38 @@
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabControl2 = new System.Windows.Forms.TabControl();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.GridEPIUrbano = new System.Windows.Forms.DataGridView();
             this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.GridEPIFlorestal = new System.Windows.Forms.DataGridView();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tabControl3 = new System.Windows.Forms.TabControl();
             this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.GridFarda1 = new System.Windows.Forms.DataGridView();
             this.tabPage6 = new System.Windows.Forms.TabPage();
+            this.GridFarda2 = new System.Windows.Forms.DataGridView();
             this.tabPage7 = new System.Windows.Forms.TabPage();
+            this.GridFarda3 = new System.Windows.Forms.DataGridView();
             this.tabPage8 = new System.Windows.Forms.TabPage();
             this.label8 = new System.Windows.Forms.Label();
             this.btnAtribuir = new System.Windows.Forms.Button();
             this.btnDevolucao = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
             this.lblNameLogin = new System.Windows.Forms.Label();
-            this.GridEPIUrbano = new System.Windows.Forms.DataGridView();
-            this.GridEPIFlorestal = new System.Windows.Forms.DataGridView();
-            this.GridFarda1 = new System.Windows.Forms.DataGridView();
-            this.GridFarda2 = new System.Windows.Forms.DataGridView();
-            this.GridFarda3 = new System.Windows.Forms.DataGridView();
             label7 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabControl2.SuspendLayout();
             this.tabPage3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.GridEPIUrbano)).BeginInit();
             this.tabPage4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.GridEPIFlorestal)).BeginInit();
             this.tabPage2.SuspendLayout();
             this.tabControl3.SuspendLayout();
             this.tabPage5.SuspendLayout();
-            this.tabPage6.SuspendLayout();
-            this.tabPage7.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.GridEPIUrbano)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.GridEPIFlorestal)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.GridFarda1)).BeginInit();
+            this.tabPage6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GridFarda2)).BeginInit();
+            this.tabPage7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GridFarda3)).BeginInit();
             this.SuspendLayout();
             // 
@@ -196,6 +196,20 @@
             this.tabPage3.Text = "Urbanos";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
+            // GridEPIUrbano
+            // 
+            this.GridEPIUrbano.AllowUserToAddRows = false;
+            this.GridEPIUrbano.AllowUserToDeleteRows = false;
+            this.GridEPIUrbano.AllowUserToResizeColumns = false;
+            this.GridEPIUrbano.AllowUserToResizeRows = false;
+            this.GridEPIUrbano.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.GridEPIUrbano.Location = new System.Drawing.Point(0, 6);
+            this.GridEPIUrbano.MultiSelect = false;
+            this.GridEPIUrbano.Name = "GridEPIUrbano";
+            this.GridEPIUrbano.ReadOnly = true;
+            this.GridEPIUrbano.Size = new System.Drawing.Size(748, 315);
+            this.GridEPIUrbano.TabIndex = 1;
+            // 
             // tabPage4
             // 
             this.tabPage4.Controls.Add(this.GridEPIFlorestal);
@@ -206,6 +220,20 @@
             this.tabPage4.TabIndex = 1;
             this.tabPage4.Text = "Florestais";
             this.tabPage4.UseVisualStyleBackColor = true;
+            // 
+            // GridEPIFlorestal
+            // 
+            this.GridEPIFlorestal.AllowUserToAddRows = false;
+            this.GridEPIFlorestal.AllowUserToDeleteRows = false;
+            this.GridEPIFlorestal.AllowUserToResizeColumns = false;
+            this.GridEPIFlorestal.AllowUserToResizeRows = false;
+            this.GridEPIFlorestal.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.GridEPIFlorestal.Location = new System.Drawing.Point(0, 6);
+            this.GridEPIFlorestal.MultiSelect = false;
+            this.GridEPIFlorestal.Name = "GridEPIFlorestal";
+            this.GridEPIFlorestal.ReadOnly = true;
+            this.GridEPIFlorestal.Size = new System.Drawing.Size(748, 315);
+            this.GridEPIFlorestal.TabIndex = 2;
             // 
             // tabPage2
             // 
@@ -240,6 +268,20 @@
             this.tabPage5.Text = "Farda Nº1";
             this.tabPage5.UseVisualStyleBackColor = true;
             // 
+            // GridFarda1
+            // 
+            this.GridFarda1.AllowUserToAddRows = false;
+            this.GridFarda1.AllowUserToDeleteRows = false;
+            this.GridFarda1.AllowUserToResizeColumns = false;
+            this.GridFarda1.AllowUserToResizeRows = false;
+            this.GridFarda1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.GridFarda1.Location = new System.Drawing.Point(0, 6);
+            this.GridFarda1.MultiSelect = false;
+            this.GridFarda1.Name = "GridFarda1";
+            this.GridFarda1.ReadOnly = true;
+            this.GridFarda1.Size = new System.Drawing.Size(748, 315);
+            this.GridFarda1.TabIndex = 2;
+            // 
             // tabPage6
             // 
             this.tabPage6.Controls.Add(this.GridFarda2);
@@ -251,6 +293,20 @@
             this.tabPage6.Text = "Farda Nº2";
             this.tabPage6.UseVisualStyleBackColor = true;
             // 
+            // GridFarda2
+            // 
+            this.GridFarda2.AllowUserToAddRows = false;
+            this.GridFarda2.AllowUserToDeleteRows = false;
+            this.GridFarda2.AllowUserToResizeColumns = false;
+            this.GridFarda2.AllowUserToResizeRows = false;
+            this.GridFarda2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.GridFarda2.Location = new System.Drawing.Point(0, 6);
+            this.GridFarda2.MultiSelect = false;
+            this.GridFarda2.Name = "GridFarda2";
+            this.GridFarda2.ReadOnly = true;
+            this.GridFarda2.Size = new System.Drawing.Size(748, 315);
+            this.GridFarda2.TabIndex = 2;
+            // 
             // tabPage7
             // 
             this.tabPage7.Controls.Add(this.GridFarda3);
@@ -261,6 +317,20 @@
             this.tabPage7.TabIndex = 2;
             this.tabPage7.Text = "Farda Nº3";
             this.tabPage7.UseVisualStyleBackColor = true;
+            // 
+            // GridFarda3
+            // 
+            this.GridFarda3.AllowUserToAddRows = false;
+            this.GridFarda3.AllowUserToDeleteRows = false;
+            this.GridFarda3.AllowUserToResizeColumns = false;
+            this.GridFarda3.AllowUserToResizeRows = false;
+            this.GridFarda3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.GridFarda3.Location = new System.Drawing.Point(0, 6);
+            this.GridFarda3.MultiSelect = false;
+            this.GridFarda3.Name = "GridFarda3";
+            this.GridFarda3.ReadOnly = true;
+            this.GridFarda3.Size = new System.Drawing.Size(748, 315);
+            this.GridFarda3.TabIndex = 2;
             // 
             // tabPage8
             // 
@@ -318,46 +388,6 @@
             this.lblNameLogin.Size = new System.Drawing.Size(0, 13);
             this.lblNameLogin.TabIndex = 14;
             // 
-            // GridEPIUrbano
-            // 
-            this.GridEPIUrbano.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.GridEPIUrbano.Location = new System.Drawing.Point(0, 6);
-            this.GridEPIUrbano.Name = "GridEPIUrbano";
-            this.GridEPIUrbano.Size = new System.Drawing.Size(748, 315);
-            this.GridEPIUrbano.TabIndex = 1;
-            // 
-            // GridEPIFlorestal
-            // 
-            this.GridEPIFlorestal.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.GridEPIFlorestal.Location = new System.Drawing.Point(0, 6);
-            this.GridEPIFlorestal.Name = "GridEPIFlorestal";
-            this.GridEPIFlorestal.Size = new System.Drawing.Size(748, 315);
-            this.GridEPIFlorestal.TabIndex = 2;
-            // 
-            // GridFarda1
-            // 
-            this.GridFarda1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.GridFarda1.Location = new System.Drawing.Point(0, 6);
-            this.GridFarda1.Name = "GridFarda1";
-            this.GridFarda1.Size = new System.Drawing.Size(748, 315);
-            this.GridFarda1.TabIndex = 2;
-            // 
-            // GridFarda2
-            // 
-            this.GridFarda2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.GridFarda2.Location = new System.Drawing.Point(0, 6);
-            this.GridFarda2.Name = "GridFarda2";
-            this.GridFarda2.Size = new System.Drawing.Size(748, 315);
-            this.GridFarda2.TabIndex = 2;
-            // 
-            // GridFarda3
-            // 
-            this.GridFarda3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.GridFarda3.Location = new System.Drawing.Point(0, 6);
-            this.GridFarda3.Name = "GridFarda3";
-            this.GridFarda3.Size = new System.Drawing.Size(748, 315);
-            this.GridFarda3.TabIndex = 2;
-            // 
             // Fardamentos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -379,21 +409,22 @@
             this.Controls.Add(this.btnFind);
             this.Controls.Add(this.txtFind);
             this.Name = "Fardamentos";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Fardamentos";
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabControl2.ResumeLayout(false);
             this.tabPage3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.GridEPIUrbano)).EndInit();
             this.tabPage4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.GridEPIFlorestal)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabControl3.ResumeLayout(false);
             this.tabPage5.ResumeLayout(false);
-            this.tabPage6.ResumeLayout(false);
-            this.tabPage7.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.GridEPIUrbano)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.GridEPIFlorestal)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.GridFarda1)).EndInit();
+            this.tabPage6.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.GridFarda2)).EndInit();
+            this.tabPage7.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.GridFarda3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

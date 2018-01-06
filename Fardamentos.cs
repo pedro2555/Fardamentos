@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 
-
+ 
 namespace Fardamentos
 {
     public partial class Fardamentos : Form
@@ -63,7 +63,9 @@ namespace Fardamentos
 
         private void btnDevolucao_Click(object sender, EventArgs e)
         {
-            Form Devolucao = new Devolucao();
+            var Devolucao = new Devolucao();
+
+
 
             Devolucao.Show();
         }

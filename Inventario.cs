@@ -64,9 +64,18 @@ namespace Fardamentos
 
         private void btnFind_Click(object sender, EventArgs e)
         {
-            Form FindInvent = new FindInvent();
+            FindInvent findInvent = new FindInvent();
 
-            FindInvent.Show();
+            findInvent.FillResultados += findInvent_FillResultados;
+
+            findInvent.Show();
+        }
+
+        private void findInvent_FillResultados(object sender, FindInvent.FillResultadosEventArgs e)
+        {
+            FillResultados(e.result.Equipamento, e.result.TipoEquipamento, e.result.Tamanho);
+
+            tabTop.SelectTab(3);
         }
 
         private void FillEPIUrbano()

@@ -51,9 +51,9 @@
             this.GridFarda3 = new System.Windows.Forms.DataGridView();
             this.tabPage8 = new System.Windows.Forms.TabPage();
             this.tabResultados = new System.Windows.Forms.TabPage();
+            this.GridResultados = new System.Windows.Forms.DataGridView();
             this.btnFind = new System.Windows.Forms.Button();
             this.Actions = new System.Windows.Forms.Timer(this.components);
-            this.GridResultados = new System.Windows.Forms.DataGridView();
             label7 = new System.Windows.Forms.Label();
             this.tabTop.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -290,6 +290,15 @@
             this.tabResultados.Text = "Resultados Pesquisa";
             this.tabResultados.UseVisualStyleBackColor = true;
             // 
+            // GridResultados
+            // 
+            this.GridResultados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.GridResultados.Cursor = System.Windows.Forms.Cursors.Default;
+            this.GridResultados.Location = new System.Drawing.Point(3, 28);
+            this.GridResultados.Name = "GridResultados";
+            this.GridResultados.Size = new System.Drawing.Size(748, 315);
+            this.GridResultados.TabIndex = 1;
+            // 
             // btnFind
             // 
             this.btnFind.Location = new System.Drawing.Point(643, 12);
@@ -305,15 +314,6 @@
             this.Actions.Interval = 1000;
             this.Actions.Tick += new System.EventHandler(this.Actions_Tick);
             // 
-            // GridResultados
-            // 
-            this.GridResultados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.GridResultados.Cursor = System.Windows.Forms.Cursors.Default;
-            this.GridResultados.Location = new System.Drawing.Point(3, 28);
-            this.GridResultados.Name = "GridResultados";
-            this.GridResultados.Size = new System.Drawing.Size(748, 315);
-            this.GridResultados.TabIndex = 1;
-            // 
             // Inventario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -327,6 +327,7 @@
             this.Controls.Add(label7);
             this.Controls.Add(this.tabTop);
             this.Name = "Inventario";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Inventário";
             this.tabTop.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);

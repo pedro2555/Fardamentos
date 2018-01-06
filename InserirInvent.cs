@@ -20,7 +20,6 @@ namespace Fardamentos
             Responsaveis();
             TipoEquipamento();
             Equipamento();
-            verify.Start();
             Tamanhos();
         }
 
@@ -191,7 +190,8 @@ namespace Fardamentos
             }
         }
 
-        private void verify_Tick(object sender, EventArgs e)
+
+        private void cboxEquipamento_SelectedIndexChanged(object sender, EventArgs e)
         {
             Equipamento();
         }
