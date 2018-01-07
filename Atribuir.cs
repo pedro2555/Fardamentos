@@ -181,7 +181,7 @@ namespace Fardamentos
             {
                 conn.Open();
 
-                string sqlEquipamento = "SELECT `inventario`.`id` as Reference, `nome` FROM inventario LEFT JOIN equipamento ON inventario.equipamento = equipamento.id WHERE tipo = @tipo ORDER by inventario.dataentrada asc";
+                string sqlEquipamento = "SELECT `inventario`.`id` as Reference, `nome` FROM inventario LEFT JOIN equipamento ON inventario.equipamento = equipamento.id WHERE tipo = @tipo and disponivel = 1 ORDER by inventario.dataentrada asc";
 
                 MySqlCommand sqlCmd = new MySqlCommand(sqlEquipamento, conn);
                 sqlCmd.Parameters.AddWithValue("@tipo", cboxTipoEquipamento.SelectedValue);

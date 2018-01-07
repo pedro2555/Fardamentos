@@ -125,7 +125,7 @@ namespace Fardamentos
             {
                 conn.Open();
 
-                string sqlEpiUrbano = "SELECT `inventario`.`id`, `equipamento`.`nome`, `tamanhos`.`tam`, `condicoes`.`condicao`, `inventario`.`obs`, `responsavel_atribuicao`, `data_atribuicao` FROM atribuicao LEFT JOIN inventario ON atribuicao.equipamento = inventario.id LEFT JOIN equipamento ON inventario.equipamento = equipamento.id LEFT JOIN tamanhos ON inventario.tamanho = tamanhos.id LEFT JOIN condicoes ON inventario.condicao = condicoes.id WHERE bombeiro = @numint and equipamento.tipo = 1";
+                string sqlEpiUrbano = "SELECT `inventario`.`id` AS Referencia, `equipamento`.`nome` as Equipamento, `tamanhos`.`tam` as Tamanho, `condicoes`.`condicao` as `Condição`, `inventario`.`obs` as Observações, `responsavel_atribuicao` as `Resp. Atribuição`, `data_atribuicao` as `Data Atribuição` FROM atribuicao LEFT JOIN inventario ON atribuicao.equipamento = inventario.id LEFT JOIN equipamento ON inventario.equipamento = equipamento.id LEFT JOIN tamanhos ON inventario.tamanho = tamanhos.id LEFT JOIN condicoes ON inventario.condicao = condicoes.id WHERE bombeiro = @numint and equipamento.tipo = 1";
 
                 MySqlCommand sqlCmd = new MySqlCommand(sqlEpiUrbano, conn);
                 sqlCmd.Parameters.AddWithValue("@numint", Convert.ToInt32(txtFind.Text));
@@ -153,7 +153,7 @@ namespace Fardamentos
             {
                 conn.Open();
 
-                string sqlEPIFlorestal = "SELECT `inventario`.`id`, `equipamento`.`nome`, `tamanhos`.`tam`, `condicoes`.`condicao`, `inventario`.`obs`, `responsavel_atribuicao`, `data_atribuicao` FROM atribuicao LEFT JOIN inventario ON atribuicao.equipamento = inventario.id LEFT JOIN equipamento ON inventario.equipamento = equipamento.id LEFT JOIN tamanhos ON inventario.tamanho = tamanhos.id LEFT JOIN condicoes ON inventario.condicao = condicoes.id WHERE bombeiro = @numint and equipamento.tipo = 2";
+                string sqlEPIFlorestal = "SELECT `inventario`.`id` AS Referencia, `equipamento`.`nome` as Equipamento, `tamanhos`.`tam` as Tamanho, `condicoes`.`condicao` as `Condição`, `inventario`.`obs` as Observações, `responsavel_atribuicao` as `Resp. Atribuição`, `data_atribuicao` as `Data Atribuição` FROM atribuicao LEFT JOIN inventario ON atribuicao.equipamento = inventario.id LEFT JOIN equipamento ON inventario.equipamento = equipamento.id LEFT JOIN tamanhos ON inventario.tamanho = tamanhos.id LEFT JOIN condicoes ON inventario.condicao = condicoes.id WHERE bombeiro = @numint and equipamento.tipo = 2";
 
                 MySqlCommand sqlCmd = new MySqlCommand(sqlEPIFlorestal, conn);
                 sqlCmd.Parameters.AddWithValue("@numint", Convert.ToInt32(txtFind.Text));
@@ -181,7 +181,7 @@ namespace Fardamentos
             {
                 conn.Open();
 
-                string sqlFarda1 = "SELECT `inventario`.`id`, `equipamento`.`nome`, `tamanhos`.`tam`, `condicoes`.`condicao`, `inventario`.`obs`, `responsavel_atribuicao`, `data_atribuicao` FROM atribuicao LEFT JOIN inventario ON atribuicao.equipamento = inventario.id LEFT JOIN equipamento ON inventario.equipamento = equipamento.id LEFT JOIN tamanhos ON inventario.tamanho = tamanhos.id LEFT JOIN condicoes ON inventario.condicao = condicoes.id WHERE bombeiro = @numint and equipamento.tipo = 3";
+                string sqlFarda1 = "SELECT `inventario`.`id` AS Referencia, `equipamento`.`nome` as Equipamento, `tamanhos`.`tam` as Tamanho, `condicoes`.`condicao` as `Condição`, `inventario`.`obs` as Observações, `responsavel_atribuicao` as `Resp. Atribuição`, `data_atribuicao` as `Data Atribuição` FROM atribuicao LEFT JOIN inventario ON atribuicao.equipamento = inventario.id LEFT JOIN equipamento ON inventario.equipamento = equipamento.id LEFT JOIN tamanhos ON inventario.tamanho = tamanhos.id LEFT JOIN condicoes ON inventario.condicao = condicoes.id WHERE bombeiro = @numint and equipamento.tipo = 3";
 
                 MySqlCommand sqlCmd = new MySqlCommand(sqlFarda1, conn);
                 sqlCmd.Parameters.AddWithValue("@numint", Convert.ToInt32(txtFind.Text));
@@ -209,7 +209,7 @@ namespace Fardamentos
             {
                 conn.Open();
 
-                string sqlFarda2 = "SELECT `inventario`.`id`, `equipamento`.`nome`, `tamanhos`.`tam`, `condicoes`.`condicao`, `inventario`.`obs`, `responsavel_atribuicao`, `data_atribuicao` FROM atribuicao LEFT JOIN inventario ON atribuicao.equipamento = inventario.id LEFT JOIN equipamento ON inventario.equipamento = equipamento.id LEFT JOIN tamanhos ON inventario.tamanho = tamanhos.id LEFT JOIN condicoes ON inventario.condicao = condicoes.id WHERE bombeiro = @numint and equipamento.tipo = 4";
+                string sqlFarda2 = "SELECT `inventario`.`id` AS Referencia, `equipamento`.`nome` as Equipamento, `tamanhos`.`tam` as Tamanho, `condicoes`.`condicao` as `Condição`, `inventario`.`obs` as Observações, `responsavel_atribuicao` as `Resp. Atribuição`, `data_atribuicao` as `Data Atribuição` FROM atribuicao LEFT JOIN inventario ON atribuicao.equipamento = inventario.id LEFT JOIN equipamento ON inventario.equipamento = equipamento.id LEFT JOIN tamanhos ON inventario.tamanho = tamanhos.id LEFT JOIN condicoes ON inventario.condicao = condicoes.id WHERE bombeiro = @numint and equipamento.tipo = 4";
 
                 MySqlCommand sqlCmd = new MySqlCommand(sqlFarda2, conn);
                 sqlCmd.Parameters.AddWithValue("@numint", Convert.ToInt32(txtFind.Text));
@@ -237,7 +237,7 @@ namespace Fardamentos
             {
                 conn.Open();
 
-                string sqlFarda3 = "SELECT `inventario`.`id`, `equipamento`.`nome`, `tamanhos`.`tam`, `condicoes`.`condicao`, `inventario`.`obs`, `responsavel_atribuicao`, `data_atribuicao` FROM atribuicao LEFT JOIN inventario ON atribuicao.equipamento = inventario.id LEFT JOIN equipamento ON inventario.equipamento = equipamento.id LEFT JOIN tamanhos ON inventario.tamanho = tamanhos.id LEFT JOIN condicoes ON inventario.condicao = condicoes.id WHERE bombeiro = @numint and equipamento.tipo = 5";
+                string sqlFarda3 = "SELECT `inventario`.`id` AS Referencia, `equipamento`.`nome` as Equipamento, `tamanhos`.`tam` as Tamanho, `condicoes`.`condicao` as `Condição`, `inventario`.`obs` as Observações, `responsavel_atribuicao` as `Resp. Atribuição`, `data_atribuicao` as `Data Atribuição` FROM atribuicao LEFT JOIN inventario ON atribuicao.equipamento = inventario.id LEFT JOIN equipamento ON inventario.equipamento = equipamento.id LEFT JOIN tamanhos ON inventario.tamanho = tamanhos.id LEFT JOIN condicoes ON inventario.condicao = condicoes.id WHERE bombeiro = @numint and equipamento.tipo = 5";
 
                 MySqlCommand sqlCmd = new MySqlCommand(sqlFarda3, conn);
                 sqlCmd.Parameters.AddWithValue("@numint", Convert.ToInt32(txtFind.Text));
