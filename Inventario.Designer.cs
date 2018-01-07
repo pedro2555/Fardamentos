@@ -165,6 +165,11 @@
             // 
             // GridEPIUrbano
             // 
+            this.GridEPIUrbano.AllowUserToAddRows = false;
+            this.GridEPIUrbano.AllowUserToDeleteRows = false;
+            this.GridEPIUrbano.AllowUserToResizeColumns = false;
+            this.GridEPIUrbano.AllowUserToResizeRows = false;
+            this.GridEPIUrbano.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
             this.GridEPIUrbano.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.GridEPIUrbano.Location = new System.Drawing.Point(2, 6);
             this.GridEPIUrbano.Name = "GridEPIUrbano";
@@ -184,6 +189,11 @@
             // 
             // GridEPIFlorestal
             // 
+            this.GridEPIFlorestal.AllowUserToAddRows = false;
+            this.GridEPIFlorestal.AllowUserToDeleteRows = false;
+            this.GridEPIFlorestal.AllowUserToResizeColumns = false;
+            this.GridEPIFlorestal.AllowUserToResizeRows = false;
+            this.GridEPIFlorestal.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
             this.GridEPIFlorestal.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.GridEPIFlorestal.Location = new System.Drawing.Point(2, 6);
             this.GridEPIFlorestal.Name = "GridEPIFlorestal";
@@ -225,6 +235,11 @@
             // 
             // GridFarda1
             // 
+            this.GridFarda1.AllowUserToAddRows = false;
+            this.GridFarda1.AllowUserToDeleteRows = false;
+            this.GridFarda1.AllowUserToResizeColumns = false;
+            this.GridFarda1.AllowUserToResizeRows = false;
+            this.GridFarda1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
             this.GridFarda1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.GridFarda1.Location = new System.Drawing.Point(0, 6);
             this.GridFarda1.Name = "GridFarda1";
@@ -244,6 +259,11 @@
             // 
             // GridFarda2
             // 
+            this.GridFarda2.AllowUserToAddRows = false;
+            this.GridFarda2.AllowUserToDeleteRows = false;
+            this.GridFarda2.AllowUserToResizeColumns = false;
+            this.GridFarda2.AllowUserToResizeRows = false;
+            this.GridFarda2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
             this.GridFarda2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.GridFarda2.Location = new System.Drawing.Point(0, 6);
             this.GridFarda2.Name = "GridFarda2";
@@ -263,6 +283,11 @@
             // 
             // GridFarda3
             // 
+            this.GridFarda3.AllowUserToAddRows = false;
+            this.GridFarda3.AllowUserToDeleteRows = false;
+            this.GridFarda3.AllowUserToResizeColumns = false;
+            this.GridFarda3.AllowUserToResizeRows = false;
+            this.GridFarda3.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
             this.GridFarda3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.GridFarda3.Location = new System.Drawing.Point(0, 6);
             this.GridFarda3.Name = "GridFarda3";
@@ -292,6 +317,11 @@
             // 
             // GridResultados
             // 
+            this.GridResultados.AllowUserToAddRows = false;
+            this.GridResultados.AllowUserToDeleteRows = false;
+            this.GridResultados.AllowUserToResizeColumns = false;
+            this.GridResultados.AllowUserToResizeRows = false;
+            this.GridResultados.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
             this.GridResultados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.GridResultados.Cursor = System.Windows.Forms.Cursors.Default;
             this.GridResultados.Location = new System.Drawing.Point(3, 28);

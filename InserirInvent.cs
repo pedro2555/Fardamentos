@@ -190,7 +190,6 @@ namespace Fardamentos
             }
         }
 
-
         private void cboxTipoEquipamento_SelectedIndexChanged(object sender, EventArgs e)
         {
             Equipamento();

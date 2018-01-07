@@ -35,7 +35,8 @@ namespace Fardamentos
         {
             InitializeComponent();
             TipoEquipamento();
-            verify.Start();
+            Equipamento();
+            Tamanho();
         }
 
         private void btnFindInvent_Click(object sender, EventArgs e)
@@ -150,7 +151,7 @@ namespace Fardamentos
             }
         }
 
-        private void verify_Tick(object sender, EventArgs e)
+        private void cboxTipoEquipamento_SelectedIndexChanged(object sender, EventArgs e)
         {
             Equipamento();
             Tamanho();

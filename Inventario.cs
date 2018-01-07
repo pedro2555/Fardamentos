@@ -233,7 +233,7 @@ namespace Fardamentos
 
                 conn.Open();
 
-                string sqlResultados = "select `nome` as Equipamento, `tam` as Tamanho from inventario LEFT JOIN equipamento ON inventario.equipamento = equipamento.id LEFT JOIN tiposfardamento ON equipamento.tipo = tiposfardamento.tipo LEFT JOIN tamanhos ON inventario.tamanho = tamanhos.id WHERE equipamento.id = @equipamento and inventario.tamanho = @tamanho and equipamento.tipo = @tipo";
+                string sqlResultados = "select `inventario`.`id` as Referencia, `nome` as Equipamento, `tam` as Tamanho, `dataentrada` as `Data Entrada`, `condicoes`.`condicao` as `Condição` from inventario LEFT JOIN equipamento ON inventario.equipamento = equipamento.id LEFT JOIN tiposfardamento ON equipamento.tipo = tiposfardamento.tipo LEFT JOIN tamanhos ON inventario.tamanho = tamanhos.id LEFT JOIN condicoes ON inventario.condicao = condicoes.id WHERE equipamento.id = @equipamento and inventario.tamanho = @tamanho and equipamento.tipo = @tipo";
 
                 MySqlCommand sqlCmd = new MySqlCommand(sqlResultados, conn);
                 sqlCmd.Parameters.AddWithValue("@equipamento", equipamento);

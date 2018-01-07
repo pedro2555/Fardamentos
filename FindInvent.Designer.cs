@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.btnFind = new System.Windows.Forms.Button();
             this.cboxTamanho = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
@@ -36,7 +35,6 @@
             this.label7 = new System.Windows.Forms.Label();
             this.cboxTipoEquipamento = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.verify = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // btnFind
@@ -90,6 +88,7 @@
             this.cboxTipoEquipamento.Name = "cboxTipoEquipamento";
             this.cboxTipoEquipamento.Size = new System.Drawing.Size(186, 21);
             this.cboxTipoEquipamento.TabIndex = 45;
+            this.cboxTipoEquipamento.SelectedIndexChanged += new System.EventHandler(this.cboxTipoEquipamento_SelectedIndexChanged);
             // 
             // label6
             // 
@@ -99,10 +98,6 @@
             this.label6.Size = new System.Drawing.Size(111, 13);
             this.label6.TabIndex = 44;
             this.label6.Text = "Tipo de Equipamento:";
-            // 
-            // verify
-            // 
-            this.verify.Tick += new System.EventHandler(this.verify_Tick);
             // 
             // FindInvent
             // 
@@ -132,6 +127,5 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.ComboBox cboxTipoEquipamento;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Timer verify;
     }
 }
