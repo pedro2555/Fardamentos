@@ -39,7 +39,7 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtObs = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.btnAtribuir = new System.Windows.Forms.Button();
             this.lblRespNome = new System.Windows.Forms.Label();
@@ -148,13 +148,13 @@
             this.label9.TabIndex = 12;
             this.label9.Text = "Condição:";
             // 
-            // textBox1
+            // txtObs
             // 
-            this.textBox1.Location = new System.Drawing.Point(129, 177);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(186, 102);
-            this.textBox1.TabIndex = 14;
+            this.txtObs.Location = new System.Drawing.Point(129, 177);
+            this.txtObs.Multiline = true;
+            this.txtObs.Name = "txtObs";
+            this.txtObs.Size = new System.Drawing.Size(186, 102);
+            this.txtObs.TabIndex = 14;
             // 
             // label10
             // 
@@ -249,7 +249,7 @@
             this.Controls.Add(this.lblRespNome);
             this.Controls.Add(this.btnAtribuir);
             this.Controls.Add(this.label10);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtObs);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.cboxEquipamento);
@@ -281,7 +281,7 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtObs;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Button btnAtribuir;
         private System.Windows.Forms.Label lblRespNome;

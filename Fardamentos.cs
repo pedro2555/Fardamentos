@@ -70,7 +70,7 @@ namespace Fardamentos
             Devolucao.Show();
         }
 
-        private void btnFind_Click(object sender, EventArgs e)
+        public void btnFind_Click(object sender, EventArgs e)
         {
 
             string sqlName = "SELECT `nome`, `nummec`, `postos`.`posto` FROM `users` LEFT JOIN postos ON users.posto = postos.id WHERE numint = @numint";

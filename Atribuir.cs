@@ -26,29 +26,45 @@ namespace Fardamentos
 
         private void Atribuir_Click(object sender, EventArgs e)
         {
-            MySqlConnection conn = new MySqlConnection(Database.Database.ConnectionString);
-
-            try
+            if (lblBombNumInt.Text != "")
             {
-                conn.Open();
-                string sqlInserirFardamento = "INSERT INTO `atribuicao` ( `equipamento` , `bombeiro`, `data_atribuicao`, `responsavel_atribuicao`, `obs`) VALUES(@equipamento, @bombeiro, NOW(), @responsavel, @obs)";
-                MySqlCommand sqlCmd = new MySqlCommand(sqlInserirFardamento, conn);
+                MySqlConnection conn = new MySqlConnection(Database.Database.ConnectionString);
 
-                sqlCmd.Parameters.AddWithValue("@equipamento", cboxEquipamento.SelectedValue);
-                sqlCmd.Parameters.AddWithValue("@bombeiro", lblBombNumInt.Text);
-                sqlCmd.Parameters.AddWithValue("@responsavel", lblRespNumInt.Text);
-                sqlCmd.Parameters.AddWithValue("@obs", lblRespNumInt.Text);
-                sqlCmd.ExecuteNonQuery();
+                try
+                {
+                    conn.Open();
+                    string sqlInserirFardamento = "INSERT INTO `atribuicao` ( `equipamento` , `bombeiro`, `data_atribuicao`, `responsavel_atribuicao`, `obs`) VALUES(@equipamento, @bombeiro, NOW(), @responsavel, @obs)";
+                    MySqlCommand sqlCmd = new MySqlCommand(sqlInserirFardamento, conn);
 
+                    sqlCmd.Parameters.AddWithValue("@equipamento", cboxEquipamento.SelectedValue);
+                    sqlCmd.Parameters.AddWithValue("@bombeiro", lblBombNumInt.Text);
+                    sqlCmd.Parameters.AddWithValue("@responsavel", lblRespNumInt.Text);
+                    sqlCmd.Parameters.AddWithValue("@obs", txtObs.Text);
+                    sqlCmd.ExecuteNonQuery();
+                    conn.Close();
+
+                    conn.Open();
+                    string sqlInserirFardamento1 = "UPDATE inventario SET disponivel = 0 WHERE id=@Referencia1";
+                    MySqlCommand sqlCmd1 = new MySqlCommand(sqlInserirFardamento1, conn);
+
+                    sqlCmd1.Parameters.AddWithValue("@Referencia1", txtReference.Text);
+
+                    sqlCmd1.ExecuteNonQuery();
+
+                }
+                catch (Exception crap)
+                {
+                    MessageBox.Show(crap.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                finally
+                {
+                    conn.Close();
+                    Hide();
+                }
             }
-            catch (Exception crap)
+            else
             {
-                MessageBox.Show(crap.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            finally
-            {
-                conn.Close();
-                Hide();
+                MessageBox.Show("Insira um bombeiro para poder atribuir material.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
         }
 
@@ -110,8 +126,10 @@ namespace Fardamentos
                         string nome = (string)sqlCmdRes[0];
                         int numint = (int)sqlCmdRes[1];
 
-                        lblBombNome.Text = nome;
-                        lblBombNumInt.Text = numint.ToString();
+                        if (NumMec != 0) {
+                            lblBombNome.Text = nome;
+                            lblBombNumInt.Text = numint.ToString();
+                        }
                     }
 
             }

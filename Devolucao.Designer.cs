@@ -30,7 +30,7 @@
         {
             this.btnDevolucao = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtMotivo = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -41,7 +41,7 @@
             this.label11 = new System.Windows.Forms.Label();
             this.lblDataentrega = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
+            this.lblRespAtribuicao = new System.Windows.Forms.Label();
             this.txtTamanhos = new System.Windows.Forms.TextBox();
             this.txtReference = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
@@ -76,13 +76,13 @@
             this.label10.TabIndex = 32;
             this.label10.Text = "Motivo :";
             // 
-            // textBox1
+            // txtMotivo
             // 
-            this.textBox1.Location = new System.Drawing.Point(127, 210);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(186, 102);
-            this.textBox1.TabIndex = 31;
+            this.txtMotivo.Location = new System.Drawing.Point(127, 210);
+            this.txtMotivo.Multiline = true;
+            this.txtMotivo.Name = "txtMotivo";
+            this.txtMotivo.Size = new System.Drawing.Size(186, 102);
+            this.txtMotivo.TabIndex = 31;
             // 
             // label7
             // 
@@ -159,9 +159,8 @@
             this.lblDataentrega.AutoSize = true;
             this.lblDataentrega.Location = new System.Drawing.Point(127, 170);
             this.lblDataentrega.Name = "lblDataentrega";
-            this.lblDataentrega.Size = new System.Drawing.Size(61, 13);
+            this.lblDataentrega.Size = new System.Drawing.Size(0, 13);
             this.lblDataentrega.TabIndex = 35;
-            this.lblDataentrega.Text = "03-01-2018";
             // 
             // label13
             // 
@@ -172,14 +171,13 @@
             this.label13.TabIndex = 36;
             this.label13.Text = "Responsável:";
             // 
-            // label14
+            // lblRespAtribuicao
             // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(127, 192);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(73, 13);
-            this.label14.TabIndex = 37;
-            this.label14.Text = "Tiago Vicente";
+            this.lblRespAtribuicao.AutoSize = true;
+            this.lblRespAtribuicao.Location = new System.Drawing.Point(127, 192);
+            this.lblRespAtribuicao.Name = "lblRespAtribuicao";
+            this.lblRespAtribuicao.Size = new System.Drawing.Size(0, 13);
+            this.lblRespAtribuicao.TabIndex = 37;
             // 
             // txtTamanhos
             // 
@@ -312,13 +310,13 @@
             this.Controls.Add(this.label16);
             this.Controls.Add(this.label17);
             this.Controls.Add(this.label18);
-            this.Controls.Add(this.label14);
+            this.Controls.Add(this.lblRespAtribuicao);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.lblDataentrega);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.btnDevolucao);
             this.Controls.Add(this.label10);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtMotivo);
             this.Controls.Add(this.cboxCondicao);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
@@ -338,7 +336,7 @@
 
         private System.Windows.Forms.Button btnDevolucao;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtMotivo;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
@@ -349,7 +347,7 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label lblDataentrega;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label lblRespAtribuicao;
         private System.Windows.Forms.TextBox txtTamanhos;
         private System.Windows.Forms.TextBox txtReference;
         private System.Windows.Forms.Label label16;
