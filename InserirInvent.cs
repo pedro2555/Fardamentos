@@ -191,7 +191,7 @@ namespace Fardamentos
         }
 
 
-        private void cboxEquipamento_SelectedIndexChanged(object sender, EventArgs e)
+        private void cboxTipoEquipamento_SelectedIndexChanged(object sender, EventArgs e)
         {
             Equipamento();
         }

@@ -105,7 +105,6 @@
             this.cboxEquipamento.Name = "cboxEquipamento";
             this.cboxEquipamento.Size = new System.Drawing.Size(186, 21);
             this.cboxEquipamento.TabIndex = 26;
-            this.cboxEquipamento.SelectedIndexChanged += new System.EventHandler(this.cboxEquipamento_SelectedIndexChanged);
             // 
             // label7
             // 
@@ -123,6 +122,7 @@
             this.cboxTipoEquipamento.Name = "cboxTipoEquipamento";
             this.cboxTipoEquipamento.Size = new System.Drawing.Size(186, 21);
             this.cboxTipoEquipamento.TabIndex = 24;
+            this.cboxTipoEquipamento.SelectedIndexChanged += new System.EventHandler(this.cboxTipoEquipamento_SelectedIndexChanged);
             // 
             // label6
             // 
