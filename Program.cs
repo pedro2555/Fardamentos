@@ -10,6 +10,8 @@ namespace Fardamentos
     {
         /// <summary>
         /// The main entry point for the application.
+        ///
+        /// Hello
         /// </summary>
         [STAThread]
         static void Main()
